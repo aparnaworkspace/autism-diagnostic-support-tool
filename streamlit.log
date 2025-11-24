@@ -1,0 +1,31 @@
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8501
+  Network URL: http://192.168.1.208:8501
+
+  For better performance, install the Watchdog module:
+
+  $ xcode-select --install
+  $ pip install watchdog
+            
+[31m──[0m[31m────────────────────────[0m[31m [0m[1;31mTraceback [0m[1;2;31m(most recent call last)[0m[31m [0m[31m─────────────────────────[0m[31m──[0m
+[31m [0m [2m/Users/aparnasajeevan/Documents/autism-diagnostic-support-tool/venv/lib/python3.13/s[0m [31m [0m
+[31m [0m [2mite-packages/streamlit/runtime/scriptrunner/[0m[1mexec_code.py[0m:129 in                      [31m [0m
+[31m [0m exec_func_with_error_handling                                                        [31m [0m
+[31m [0m                                                                                      [31m [0m
+[31m [0m [2m/Users/aparnasajeevan/Documents/autism-diagnostic-support-tool/venv/lib/python3.13/s[0m [31m [0m
+[31m [0m [2mite-packages/streamlit/runtime/scriptrunner/[0m[1mscript_runner.py[0m:669 in code_to_exec     [31m [0m
+[31m [0m                                                                                      [31m [0m
+[31m [0m [2m/Users/aparnasajeevan/Documents/autism-diagnostic-support-tool/app/[0m[1mstreamlit_app.py[0m: [31m [0m
+[31m [0m 15 in <module>                                                                       [31m [0m
+[31m [0m                                                                                      [31m [0m
+[31m [0m   [2m 12 [0m[2m# make project root importable[0m                                                 [31m [0m
+[31m [0m   [2m 13 [0m[94mimport[0m[90m [0m[4;96msys[0m                                                                     [31m [0m
+[31m [0m   [2m 14 [0msys.path.append([33m"[0m[33m..[0m[33m"[0m)                                                          [31m [0m
+[31m [0m [31m❱ [0m 15 [1;4;94mfrom[0m[1;4;90m [0m[1;4;96msrc[0m[1;4;96m.[0m[1;4;96mrisk_scoring[0m[1;4;90m [0m[1;4;94mimport[0m[1;4m compute_risk_score[0m                                [31m [0m
+[31m [0m   [2m 16 [0m                                                                               [31m [0m
+[31m [0m   [2m 17 [0m[2m# ---------------------------[0m                                                  [31m [0m
+[31m [0m   [2m 18 [0m[2m# Helper: load raw df & build encoders (so app uses same encoding as FE)[0m       [31m [0m
+[31m────────────────────────────────────────────────────────────────────────────────────────[0m
+[1;91mModuleNotFoundError: [0mNo module named [32m'src'[0m

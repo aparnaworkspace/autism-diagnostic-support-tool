@@ -1,0 +1,139 @@
+[I 2025-11-24 09:02:34.924 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2025-11-24 09:02:34.926 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2025-11-24 09:02:34.929 ServerApp] jupyterlab | extension was successfully linked.
+[I 2025-11-24 09:02:35.188 ServerApp] notebook_shim | extension was successfully linked.
+[I 2025-11-24 09:02:35.246 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2025-11-24 09:02:35.248 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2025-11-24 09:02:35.249 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2025-11-24 09:02:35.251 LabApp] JupyterLab extension loaded from /Users/aparnasajeevan/Documents/autism-diagnostic-support-tool/venv/lib/python3.13/site-packages/jupyterlab
+[I 2025-11-24 09:02:35.251 LabApp] JupyterLab application directory is /Users/aparnasajeevan/Documents/autism-diagnostic-support-tool/venv/share/jupyter/lab
+[I 2025-11-24 09:02:35.251 LabApp] Extension Manager is 'pypi'.
+[I 2025-11-24 09:02:35.305 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2025-11-24 09:02:35.306 ServerApp] Serving notebooks from local directory: /Users/aparnasajeevan/Documents/autism-diagnostic-support-tool
+[I 2025-11-24 09:02:35.306 ServerApp] Jupyter Server 2.17.0 is running at:
+[I 2025-11-24 09:02:35.306 ServerApp] http://localhost:8888/lab?token=d76b8081290c22ea8fa82d138b679241ffe52120a8e705a1
+[I 2025-11-24 09:02:35.306 ServerApp]     http://127.0.0.1:8888/lab?token=d76b8081290c22ea8fa82d138b679241ffe52120a8e705a1
+[I 2025-11-24 09:02:35.306 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 2025-11-24 09:02:35.310 ServerApp] 
+    
+    To access the server, open this file in a browser:
+        file:///Users/aparnasajeevan/Library/Jupyter/runtime/jpserver-9117-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/lab?token=d76b8081290c22ea8fa82d138b679241ffe52120a8e705a1
+        http://127.0.0.1:8888/lab?token=d76b8081290c22ea8fa82d138b679241ffe52120a8e705a1
+[I 2025-11-24 09:02:35.529 ServerApp] Skipped non-installed server(s): basedpyright, bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyrefly, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[W 2025-11-24 09:02:38.280 ServerApp] 404 GET /api/contents/notebooks/Untitled.ipynb?content=0&hash=0&1763955158251 (20e2a7f874a044778cd1ed58d05c6bf8@::1) 3.32ms referer=http://localhost:8888/lab
+[W 2025-11-24 09:02:38.280 ServerApp] 404 GET /api/contents/notebooks/Untitled.ipynb?content=0&hash=0&1763955158251 (::1): No such file or directory: notebooks/Untitled.ipynb
+[W 2025-11-24 09:02:38.283 ServerApp] 404 GET /api/contents/notebooks/Untitled1.ipynb?content=0&hash=0&1763955158251 (20e2a7f874a044778cd1ed58d05c6bf8@::1) 1.78ms referer=http://localhost:8888/lab
+[W 2025-11-24 09:02:38.283 ServerApp] 404 GET /api/contents/notebooks/Untitled1.ipynb?content=0&hash=0&1763955158251 (::1): No such file or directory: notebooks/Untitled1.ipynb
+[W 2025-11-24 09:02:38.289 ServerApp] 404 GET /api/contents/notebooks/Untitled.ipynb?content=0&hash=0&1763955158251 (20e2a7f874a044778cd1ed58d05c6bf8@::1) 2.12ms referer=http://localhost:8888/lab
+[W 2025-11-24 09:02:38.289 ServerApp] 404 GET /api/contents/notebooks/Untitled.ipynb?content=0&hash=0&1763955158251 (::1): No such file or directory: notebooks/Untitled.ipynb
+[W 2025-11-24 09:02:38.290 ServerApp] 404 GET /api/contents/notebooks/Untitled1.ipynb?content=0&hash=0&1763955158251 (20e2a7f874a044778cd1ed58d05c6bf8@::1) 2.28ms referer=http://localhost:8888/lab
+[W 2025-11-24 09:02:38.290 ServerApp] 404 GET /api/contents/notebooks/Untitled1.ipynb?content=0&hash=0&1763955158251 (::1): No such file or directory: notebooks/Untitled1.ipynb
+[I 2025-11-24 09:02:38.368 LabApp] Build is up to date
+[W 2025-11-24 09:02:38.673 ServerApp] SSL Error on 17 ('151.101.128.223', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)
+[I 2025-11-24 09:02:38.938 ServerApp] Kernel started: 711abb94-7b77-491e-ba98-5ebcd1225889
+[I 2025-11-24 09:02:39.448 ServerApp] Connecting to kernel 711abb94-7b77-491e-ba98-5ebcd1225889.
+[W 2025-11-24 09:02:39.449 ServerApp] The websocket_ping_timeout (90000) cannot be longer than the websocket_ping_interval (30000).
+    Setting websocket_ping_timeout=30000
+[I 2025-11-24 09:02:39.452 ServerApp] Connecting to kernel 711abb94-7b77-491e-ba98-5ebcd1225889.
+[I 2025-11-24 09:02:39.457 ServerApp] Connecting to kernel 711abb94-7b77-491e-ba98-5ebcd1225889.
+[W 2025-11-24 09:02:39.466 ServerApp] Got events for closed stream <zmq.eventloop.zmqstream.ZMQStream object at 0x10c1ffd90>
+[W 2025-11-24 09:02:52.114 ServerApp] 404 GET /api/kernels/5144534a-755d-49f9-bd83-c61ca64b2406?1763955172110 (::1): Kernel does not exist: 5144534a-755d-49f9-bd83-c61ca64b2406
+[W 2025-11-24 09:02:52.115 ServerApp] wrote error: 'Kernel does not exist: 5144534a-755d-49f9-bd83-c61ca64b2406'
+    Traceback (most recent call last):
+      File "/Users/aparnasajeevan/Documents/autism-diagnostic-support-tool/venv/lib/python3.13/site-packages/tornado/web.py", line 1848, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/Users/aparnasajeevan/Documents/autism-diagnostic-support-tool/venv/lib/python3.13/site-packages/jupyter_server/auth/decorator.py", line 73, in inner
+        return await out
+               ^^^^^^^^^
+      File "/Users/aparnasajeevan/Documents/autism-diagnostic-support-tool/venv/lib/python3.13/site-packages/jupyter_server/services/kernels/handlers.py", line 75, in get
+        model = await ensure_async(km.kernel_model(kernel_id))
+                                   ~~~~~~~~~~~~~~~^^^^^^^^^^^
+      File "/Users/aparnasajeevan/Documents/autism-diagnostic-support-tool/venv/lib/python3.13/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 513, in kernel_model
+        self._check_kernel_id(kernel_id)
+        ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+      File "/Users/aparnasajeevan/Documents/autism-diagnostic-support-tool/venv/lib/python3.13/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 544, in _check_kernel_id
+        raise web.HTTPError(404, "Kernel does not exist: %s" % kernel_id)
+    tornado.web.HTTPError: HTTP 404: Not Found (Kernel does not exist: 5144534a-755d-49f9-bd83-c61ca64b2406)
+[W 2025-11-24 09:02:52.121 ServerApp] 404 GET /api/kernels/5144534a-755d-49f9-bd83-c61ca64b2406?1763955172110 (20e2a7f874a044778cd1ed58d05c6bf8@::1) 7.49ms referer=http://localhost:8888/lab/tree/notebooks/03_Model_Training.ipynb
+[W 2025-11-24 09:02:52.679 ServerApp] 404 GET /api/kernels/5144534a-755d-49f9-bd83-c61ca64b2406/channels?session_id=b9a46eb9-3f03-4bce-9350-15f6abf2dd03 (::1): Kernel does not exist: 5144534a-755d-49f9-bd83-c61ca64b2406
+[W 2025-11-24 09:02:52.729 ServerApp] 404 GET /api/kernels/5144534a-755d-49f9-bd83-c61ca64b2406/channels?session_id=b9a46eb9-3f03-4bce-9350-15f6abf2dd03 (20e2a7f874a044778cd1ed58d05c6bf8@::1) 50.94ms referer=None
+[W 2025-11-24 09:02:52.834 ServerApp] 404 GET /api/kernels/5144534a-755d-49f9-bd83-c61ca64b2406?1763955172830 (::1): Kernel does not exist: 5144534a-755d-49f9-bd83-c61ca64b2406
+[W 2025-11-24 09:02:52.835 ServerApp] wrote error: 'Kernel does not exist: 5144534a-755d-49f9-bd83-c61ca64b2406'
+    Traceback (most recent call last):
+      File "/Users/aparnasajeevan/Documents/autism-diagnostic-support-tool/venv/lib/python3.13/site-packages/tornado/web.py", line 1848, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/Users/aparnasajeevan/Documents/autism-diagnostic-support-tool/venv/lib/python3.13/site-packages/jupyter_server/auth/decorator.py", line 73, in inner
+        return await out
+               ^^^^^^^^^
+      File "/Users/aparnasajeevan/Documents/autism-diagnostic-support-tool/venv/lib/python3.13/site-packages/jupyter_server/services/kernels/handlers.py", line 75, in get
+        model = await ensure_async(km.kernel_model(kernel_id))
+                                   ~~~~~~~~~~~~~~~^^^^^^^^^^^
+      File "/Users/aparnasajeevan/Documents/autism-diagnostic-support-tool/venv/lib/python3.13/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 513, in kernel_model
+        self._check_kernel_id(kernel_id)
+        ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+      File "/Users/aparnasajeevan/Documents/autism-diagnostic-support-tool/venv/lib/python3.13/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 544, in _check_kernel_id
+        raise web.HTTPError(404, "Kernel does not exist: %s" % kernel_id)
+    tornado.web.HTTPError: HTTP 404: Not Found (Kernel does not exist: 5144534a-755d-49f9-bd83-c61ca64b2406)
+[W 2025-11-24 09:02:52.836 ServerApp] 404 GET /api/kernels/5144534a-755d-49f9-bd83-c61ca64b2406?1763955172830 (20e2a7f874a044778cd1ed58d05c6bf8@::1) 2.86ms referer=http://localhost:8888/lab/tree/notebooks/03_Model_Training.ipynb
+[I 2025-11-24 09:03:48.342 ServerApp] Saving file at /src/risk_scoring.py
+[I 2025-11-24 09:03:48.346 ServerApp] Saving file at /app/streamlit_app.py
+[I 2025-11-24 09:03:48.357 ServerApp] Saving file at /notebooks/03_Model_Training.ipynb
+[I 2025-11-24 09:07:18.884 ServerApp] Saving file at /app/streamlit_app.py
+[I 2025-11-24 09:15:16.503 ServerApp] Saving file at /app/streamlit_app.py
+[I 2025-11-24 09:15:20.244 ServerApp] Saving file at /src/risk_scoring.py
+[I 2025-11-24 09:15:20.249 ServerApp] Saving file at /src/train_model.py
+[I 2025-11-24 09:15:20.257 ServerApp] Saving file at /notebooks/03_Model_Training.ipynb
+[I 2025-11-24 09:15:20.265 ServerApp] Saving file at /app/streamlit_app.py
+[I 2025-11-24 09:20:51.159 ServerApp] Saving file at /app/streamlit_app.py
+[I 2025-11-24 09:25:09.789 ServerApp] Saving file at /app/streamlit_app.py
+[I 2025-11-24 09:29:10.007 ServerApp] Saving file at /app/streamlit_app.py
+[I 2025-11-24 09:33:31.268 ServerApp] Saving file at /app/streamlit_app.py
+[I 2025-11-24 09:37:51.096 ServerApp] Saving file at /app/streamlit_app.py
+[I 2025-11-24 09:42:53.307 ServerApp] Saving file at /app/streamlit_app.py
+[I 2025-11-24 09:51:25.234 ServerApp] Saving file at /app/streamlit_app.py
+[I 2025-11-24 09:52:06.676 ServerApp] Creating new file in /app
+[W 2025-11-24 09:52:20.233 ServerApp] 409 PATCH /api/contents/app/untitled.py?1763958140227 (::1): File already exists: app/streamlit_app.py
+[W 2025-11-24 09:52:20.234 ServerApp] wrote error: 'File already exists: app/streamlit_app.py'
+    Traceback (most recent call last):
+      File "/Users/aparnasajeevan/Documents/autism-diagnostic-support-tool/venv/lib/python3.13/site-packages/tornado/web.py", line 1848, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/Users/aparnasajeevan/Documents/autism-diagnostic-support-tool/venv/lib/python3.13/site-packages/jupyter_server/auth/decorator.py", line 73, in inner
+        return await out
+               ^^^^^^^^^
+      File "/Users/aparnasajeevan/Documents/autism-diagnostic-support-tool/venv/lib/python3.13/site-packages/jupyter_server/services/contents/handlers.py", line 206, in patch
+        model = await ensure_async(cm.update(model, path))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aparnasajeevan/Documents/autism-diagnostic-support-tool/venv/lib/python3.13/site-packages/jupyter_core/utils/__init__.py", line 214, in ensure_async
+        result = await obj
+                 ^^^^^^^^^
+      File "/Users/aparnasajeevan/Documents/autism-diagnostic-support-tool/venv/lib/python3.13/site-packages/jupyter_server/services/contents/manager.py", line 917, in update
+        await self.rename(path, new_path)
+      File "/Users/aparnasajeevan/Documents/autism-diagnostic-support-tool/venv/lib/python3.13/site-packages/jupyter_server/services/contents/manager.py", line 904, in rename
+        await self.rename_file(old_path, new_path)
+      File "/Users/aparnasajeevan/Documents/autism-diagnostic-support-tool/venv/lib/python3.13/site-packages/jupyter_server/services/contents/filemanager.py", line 1066, in rename_file
+        raise web.HTTPError(409, "File already exists: %s" % new_path)
+    tornado.web.HTTPError: HTTP 409: Conflict (File already exists: app/streamlit_app.py)
+[W 2025-11-24 09:52:20.241 ServerApp] 409 PATCH /api/contents/app/untitled.py?1763958140227 (20e2a7f874a044778cd1ed58d05c6bf8@::1) 9.90ms referer=http://localhost:8888/lab/tree/app/untitled.py
+[W 2025-11-24 09:52:27.967 ServerApp] delete /app/streamlit_app.py
+[I 2025-11-24 09:52:47.558 ServerApp] Saving file at /app/streamlit_app.py
+[I 2025-11-24 10:09:50.831 ServerApp] Kernel started: 84644e44-8857-4d0d-b458-ff49d990a2e9
+[I 2025-11-24 10:09:51.588 ServerApp] Connecting to kernel 84644e44-8857-4d0d-b458-ff49d990a2e9.
+[I 2025-11-24 10:11:50.701 ServerApp] Saving file at /notebooks/02_Feature_Engineering.ipynb
+[I 2025-11-24 10:13:50.947 ServerApp] Saving file at /notebooks/02_Feature_Engineering.ipynb
+[I 2025-11-24 10:15:51.104 ServerApp] Saving file at /notebooks/02_Feature_Engineering.ipynb
+[I 2025-11-24 10:15:59.579 ServerApp] Kernel restarted: 84644e44-8857-4d0d-b458-ff49d990a2e9
+[I 2025-11-24 10:15:59.584 ServerApp] Starting buffering for 84644e44-8857-4d0d-b458-ff49d990a2e9:aa7b8005-d991-4117-9e1a-d842f1c9b294
+[I 2025-11-24 10:15:59.595 ServerApp] Connecting to kernel 84644e44-8857-4d0d-b458-ff49d990a2e9.
+[I 2025-11-24 10:15:59.595 ServerApp] Restoring connection for 84644e44-8857-4d0d-b458-ff49d990a2e9:aa7b8005-d991-4117-9e1a-d842f1c9b294
+[I 2025-11-24 10:17:51.164 ServerApp] Saving file at /notebooks/02_Feature_Engineering.ipynb
+[I 2025-11-24 10:19:51.207 ServerApp] Saving file at /notebooks/02_Feature_Engineering.ipynb
+[W 2025-11-24 10:21:32.246 ServerApp] 404 GET /api/contents/models/scaler.pkl?content=0&hash=0&1763959892243 (20e2a7f874a044778cd1ed58d05c6bf8@::1) 0.83ms referer=http://localhost:8888/lab/tree/notebooks/02_Feature_Engineering.ipynb
+[W 2025-11-24 10:21:32.246 ServerApp] 404 GET /api/contents/models/scaler.pkl?content=0&hash=0&1763959892243 (::1): No such file or directory: models/scaler.pkl
+[I 2025-11-24 10:21:51.245 ServerApp] Saving file at /notebooks/02_Feature_Engineering.ipynb
+[I 2025-11-24 13:52:04.627 ServerApp] Starting buffering for 711abb94-7b77-491e-ba98-5ebcd1225889:0b942233-2efa-4329-93e4-a39e9a1abccd
+[I 2025-11-24 13:52:04.645 ServerApp] Starting buffering for 84644e44-8857-4d0d-b458-ff49d990a2e9:aa7b8005-d991-4117-9e1a-d842f1c9b294
