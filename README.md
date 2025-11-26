@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="banner.png" width="100%" />
+  <img src="banner03.png" width="100%" />
 </p>
 
 # 🧠 Autism Diagnostic Support System
