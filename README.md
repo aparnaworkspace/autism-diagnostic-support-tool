@@ -1,34 +1,6 @@
 <p align="center">
   <img src="banner04.png" width="100%" />
 </p>
-<!-- EXECUTIVE SUMMARY  -->
-<p align="center">
-  <div style="
-      background: #e8f1ff;
-      border-radius: 16px;
-      padding: 22px;
-      max-width: 780px;
-      margin: auto;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.06);
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto;
-  ">
-    <h2 align="center" style="color:#1d4ed8; margin-bottom:10px;">
-      ⭐ Executive Summary
-    </h2>
-    <p align="center" style="color:#1e3a8a; font-size:15px;">
-      This project is a full end-to-end <b>Autism Diagnostic Support System</b>, blending 
-      <b>Machine Learning</b>, <b>Explainable AI</b>, and a polished Apple-Health-style UI.  
-      It predicts ASD likelihood using the validated AQ-10 questionnaire via a tuned 
-      <b>XGBoost model</b>, enhanced by <b>SHAP local & global explanations</b>.
-      The system includes real-time probability rings, structured risk scoring, 
-      and automatic PDF report generation.
-      <br><br>
-      Built completely from scratch, it demonstrates expertise in 
-      <b>data engineering</b>, <b>model development</b>, <b>explainability</b>,
-      <b>UI/UX engineering</b>, and <b>deployment-ready architecture</b>.
-    </p>
-  </div>
-</p>
 
 # 🧠 Autism Diagnostic Support System
 ## XGBoost • SHAP Explainability • Apple-Health Inspired Clinical UI
