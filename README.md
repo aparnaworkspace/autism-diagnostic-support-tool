@@ -1,10 +1,10 @@
-Apple-Health Inspired Streamlit App | XGBoost Model | SHAP Explainability | Full ML Pipeline
+# **Apple-Health Inspired Streamlit App | XGBoost Model | SHAP Explainability | Full ML Pipeline**
 
 A modern, end-to-end machine learning system that predicts Autism Spectrum Disorder (ASD) risk using the AQ-10 screening questionnaire, paired with transparent SHAP explanations, a clinical-style UI, and a clean PDF report generator.
 
 Designed for learning, research demonstration, and portfolio showcasing — not for clinical diagnosis.
 
-⭐ 1. Problem Statement
+## ⭐ 1. Problem Statement
 
 Early detection of Autism is essential for timely interventions, yet millions remain undiagnosed due to:
 
@@ -18,7 +18,7 @@ stigma and fear of assessment
 
 This project builds an interactive ML-powered support tool that makes ASD risk assessment accessible, explainable, and easy to understand using a validated 10-question AQ-10 screening dataset.
 
-⭐ 2. Why Autism Detection Matters
+## ⭐ 2. Why Autism Detection Matters
 
 ASD affects 1 in 100 individuals globally.
 
@@ -31,7 +31,7 @@ Machine learning can assist, but should never replace professional evaluation.
 
 This project explores how ML + Explainability can enhance early screening systems.
 
-⭐ 3. Dataset Description
+## ⭐ 3. Dataset Description
 
 Source:
 
@@ -51,9 +51,9 @@ Size: ~700 rows
 
 Type: Questionnaire-based classification
 
-📌 Note: This dataset is small, simple, and diagnostic by design — which explains the high model performance.
+#### 📌 Note: This dataset is small, simple, and diagnostic by design — which explains the high model performance.
 
-⭐ 4. Project Pipeline (ML Workflow)
+## ⭐ 4. Project Pipeline (ML Workflow)
 
 
     A[Raw Data] --> B[Data Cleaning]
@@ -66,7 +66,7 @@ Type: Questionnaire-based classification
     H --> I[Streamlit App + PDF Report]
     I --> J[Deployment]
 
-⭐ 5. System Architecture Diagram
+## ⭐ 5. System Architecture Diagram
 
 
     UI[Streamlit UI] --> API
@@ -77,9 +77,9 @@ Type: Questionnaire-based classification
     SHAP --> UI
     API --> Report[PDF Generator]
 
-⭐ 6. Screenshot Previews
+## ⭐ 6. Screenshot Previews
 
-📱 Home / Prediction Dashboard
+### 📱 Home / Prediction Dashboard
 
 <img width="1634" height="920" alt="Screenshot 2025-11-26 at 8 20 56 AM" src="https://github.com/user-attachments/assets/800e538c-3cc8-4fc7-9d24-d9f603f1f5bf" />
 
@@ -87,26 +87,48 @@ Type: Questionnaire-based classification
 
 
 
-📝 PDF Report
+### 📝 PDF Report
 
 <img width="701" height="546" alt="Screenshot 2025-11-26 at 8 23 44 AM" src="https://github.com/user-attachments/assets/58bfa026-1a83-4a40-a868-3d22d82df919" />
 
 
-🔍 SHAP Local Explanations
+## 🔍 SHAP Local Explanation (Per-Patient)
+
+This section shows **why the XGBoost model predicted ASD Positive/Negative** for a specific patient input.  
+SHAP assigns each feature a positive (pushes toward ASD+) or negative (pushes toward ASD−) contribution.
+
+### 📌 Example Local SHAP Output
+| Feature        | SHAP Value |
+|----------------|------------|
+| a9_score       | -1.2110    |
+| a6_score       | -1.0042    |
+| a5_score       | -0.8661    |
+| a7_score       | -0.8091    |
+| a3_score       | -0.7645    |
+| a4_score       | -0.7368    |
+
+### 🔎 Interpretation  
+- **Negative SHAP values** → Feature pushes prediction toward *ASD Negative*  
+- **Positive SHAP values** → Feature pushes prediction toward *ASD Positive*  
+- Higher absolute magnitude = **stronger impact**
+
+This improves transparency and trust by showing *why* the model predicted what it did for each patient.
 
 
-<img width="3248" height="1837" alt="image" src="https://github.com/user-attachments/assets/54501d0e-3ee3-4f75-b8d1-94f07a5bbca6" />
 
 
-⭐ 7. Model Comparison Table
+## ⭐ 7. Model Comparison Table
 
-Model	Accuracy	               F1       Score	    Recall     AUC
-Logistic Regression          	1.00	    1.00	    1.00	     0.99
-Random Forest                	0.94	    0.89	    0.84	     0.996
-XGBoost (chosen)	            0.986	    0.974	    0.974	     0.9995
-Neural Network	              1.00	    1.00	    1.00	     1.00
 
-⭐ 8. Model Stack
+| Model               | Accuracy | F1 Score | Recall | AUC    |
+|---------------------|----------|----------|--------|--------|
+| Logistic Regression | **1.00** | **1.00** | **1.00** | 0.99 |
+| Random Forest       | 0.94     | 0.89     | 0.84   | 0.996  |
+| **XGBoost (Chosen)**| **0.986** | **0.974** | **0.974** | **0.9995** |
+| Neural Network      | **1.00** | **1.00** | **1.00** | **1.00** |
+
+
+## ⭐ 8. Model Stack
 
 Core Model
 
@@ -124,24 +146,28 @@ Local + global attribution
 
 Top 6 most influential features shown
 
-⭐ 9. SHAP Example Images
+## ⭐ 9. SHAP Example Images
 
-📌 Sample Local SHAP Bar Plot
+### 📌 Sample Local SHAP Bar Plot
+
 <img width="800" height="1100" alt="shap_bar" src="https://github.com/user-attachments/assets/ac6114ae-60d1-4d10-b6c4-d5da2b87094f" />
 
 
 
-📌 SHAP Beeswarm (global)
+### 📌 SHAP Beeswarm (global)
+
 <img width="800" height="910" alt="shap_beeswarm" src="https://github.com/user-attachments/assets/26891602-a186-40bf-bb43-1137f8649b3a" />
 
 
 
-📌 SHAP Waterfall Example
+### 📌 SHAP Waterfall Example
+
 <img width="800" height="650" alt="shap_waterfall_sample_0" src="https://github.com/user-attachments/assets/073525b8-b967-4e00-818d-c55287b47071" />
 
 
 
-⭐ 10. PDF Report Example
+
+## ⭐ 10. PDF Report Example
 
 The app generates a clinical-style PDF including:
 
@@ -160,7 +186,7 @@ Top SHAP Features
 <img width="1419" height="1092" alt="image" src="https://github.com/user-attachments/assets/7084f0a2-be79-424e-9e7d-dab4c60da130" />
 
 
-⭐ 11. System Design Overview
+## ⭐ 11. System Design Overview
 
 Backend
 
@@ -188,7 +214,7 @@ Storage
 
 /reports/ for visual outputs
 
-⭐ 12. How to Run Locally
+## ⭐ 12. How to Run Locally
 
 1. Clone the repo
    
@@ -208,7 +234,7 @@ pip install -r requirements.txt
    
 streamlit run app/streamlit_app.py
 
-⭐ 13. Features Screenshot Section
+## ⭐ 13. Features Screenshot Section
 
 Include images for:
 
@@ -222,7 +248,7 @@ Risk level card
 
 DF button
 
-⭐ 14. Clinical Disclaimer
+## ⭐ 14. Clinical Disclaimer
 
 ⚠️ This tool is NOT a clinical diagnostic system.
 
@@ -238,7 +264,7 @@ developmental history
 
 genetic & neurological assessment
 
-⭐ 15. Folder Structure
+## ⭐ 15. Folder Structure
 
 autism-diagnostic-support-tool/
 
@@ -285,7 +311,7 @@ autism-diagnostic-support-tool/
 
 └── README.md
 
-⭐ 16. XGBoost Model Card
+## ⭐ 16. XGBoost Model Card
 
 Model: XGBoostClassifier
 
@@ -317,7 +343,7 @@ Overconfidence due to small dataset
 
 Dataset biases may carry forward
 
-⭐ 17. Limitations
+## ⭐ 17. Limitations
 
 Data-related
 
@@ -347,7 +373,7 @@ App-related
 
 Intended for education & research showcase only
 
-⭐ 18. What I Learned
+## ⭐ 18. What I Learned
 
 End-to-end ML pipeline design
 
@@ -367,7 +393,7 @@ GitHub project structuring
 
 Deployment workflow
 
-⭐ Final Notes
+## ⭐ Final Notes
 
 This project demonstrates:
 
