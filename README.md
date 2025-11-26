@@ -115,8 +115,6 @@ SHAP assigns each feature a positive (pushes toward ASD+) or negative (pushes to
 This improves transparency and trust by showing *why* the model predicted what it did for each patient.
 
 
-
-
 ## ⭐ 7. Model Comparison Table
 
 
@@ -130,7 +128,7 @@ This improves transparency and trust by showing *why* the model predicted what i
 
 ## ⭐ 8. Model Stack
 
-Core Model
+### Core Model
 
 XGBoost Classifier
 
@@ -138,7 +136,7 @@ Tuned for small structured datasets
 
 Supports Tree SHAP (fast, reliable)
 
-Explainability
+### Explainability
 
 SHAP TreeExplainer
 
@@ -188,7 +186,7 @@ Top SHAP Features
 
 ## ⭐ 11. System Design Overview
 
-Backend
+### Backend
 
 Model inference pipeline
 
@@ -198,7 +196,7 @@ Age group derived feature
 
 SHAP explanation engine
 
-Frontend
+### Frontend
 
 Apple HealthInspired UI
 
@@ -206,7 +204,7 @@ Glassmorphism cards
 
 Real-time probability ring
 
-PDF generation
+### PDF generation
 
 Storage
 
@@ -327,7 +325,7 @@ Intended use: Educational screening insights
 
 Not intended for: Professional diagnosis
 
-Strengths:
+#### Strengths:
 
 Highly separable dataset
 
@@ -337,7 +335,7 @@ Strong performance
 
 Built-in explainability
 
-Risks:
+#### Risks:
 
 Overconfidence due to small dataset
 
@@ -345,7 +343,7 @@ Dataset biases may carry forward
 
 ## ⭐ 17. Limitations
 
-Data-related
+### Data-related
 
 Dataset is very small (< 800 samples)
 
@@ -355,11 +353,11 @@ AQ-10 questions are diagnostic, causing high separability
 
 Labels may not represent real clinical outcomes
 
-Model-related
+### Model-related
 
 Cannot generalize to real-world populations
 
-Does not use:
+### Does not use:
 
 behavioural observation
 
