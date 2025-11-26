@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="banner.png" width="100%" />
+</p>
+
 # 🧠 Autism Diagnostic Support System
 ## XGBoost • SHAP Explainability • Apple-Health Inspired Clinical UI
 
