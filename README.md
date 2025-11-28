@@ -98,7 +98,7 @@ The dataset is **small and highly separable** because AQ-10 questions are direct
 This explains the unusually high performance of ML models.
 
 
-## ⭐ 5. Project Pipeline (ML Workflow)
+## ⭐5. Project Pipeline (ML Workflow)
 
 
     A[Raw Data (UCI/Kaggle AQ-10)] --> B[Data Cleaning]
@@ -110,10 +110,44 @@ This explains the unusually high performance of ML models.
     G --> H[SHAP Explainability (Local + Global)]
     H --> I[Streamlit App (Apple Health UI)]
     I --> J[PDF Report Generator]
+    
+## ⭐6. System Architecture Diagram
 
+```mermaid
+flowchart LR
+    subgraph UI[Streamlit Frontend]
+        A1[Input Form]
+        A2[Prediction Dashboard]
+        A3[PDF Report Button]
+    end
 
+    subgraph API[Backend Inference Layer]
+        B1[Preprocessing Pipeline]
+        B2[Label Encoders]
+        B3[StandardScaler]
+        B4[XGBoost Model]
+        B5[SHAP TreeExplainer]
+    end
 
+    subgraph Storage[Artifacts & Reports]
+        C1[models/]
+        C2[reports/]
+        C3[data/processed/]
+    end
 
+    %% Connections
+    A1 --> B1
+    B1 --> B2
+    B1 --> B3
+    B3 --> B4
+    B4 --> B5
+    B4 --> A2
+    B5 --> A2
+    A3 --> C2
+    B4 --> C1
+    B2 --> C1
+    B3 --> C1
+```
 
 
 
