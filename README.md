@@ -100,7 +100,6 @@ This explains the unusually high performance of ML models.
 
 ## Project Pipeline (ML Workflow)
 
-flowchart TB
 
     subgraph PREP[Data Preparation]
         A1[Raw Data]
@@ -128,7 +127,7 @@ flowchart TB
     C1 --> C2
 
     
-## ⭐6. System Architecture Diagram
+## System Architecture Diagram
 
 ```mermaid
 flowchart LR
@@ -166,5 +165,19 @@ flowchart LR
     B3 --> C1
 ```
 
+## 7. Model Performance & Comparison
+
+| Model                 | Accuracy | F1 Score | Recall | AUC      |
+|----------------------|----------|----------|--------|----------|
+| Logistic Regression   | 1.00     | 1.00     | 1.00   | 0.99     |
+| Random Forest         | 0.94     | 0.89     | 0.84   | 0.996    |
+| XGBoost (Chosen)      | **0.986**| **0.974**| **0.974** | **0.9995** |
+| Neural Network (MLP)  | 1.00     | 1.00     | 1.00   | 1.00     |
+
+### 🏆 Why XGBoost Was Chosen
+- Best trade-off between **accuracy**, **stability**, and **interpretability**
+- Works extremely well on **small structured datasets**
+- Fully compatible with **TreeSHAP** for transparent explainability
+- Fast, robust, and highly generalizable
 
 
