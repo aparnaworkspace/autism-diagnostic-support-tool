@@ -34,22 +34,23 @@ This is a **machine learning project** designed to demonstrate my ability to bui
 
 ## 📑 Table of Contents
 
-1. **Executive Summary**
-2. **Problem Statement**
-3. **Why Autism Detection Matters**
-4. **Dataset Description**
-5. **Project Pipeline (ML Workflow)**
-6. **System Architecture**
-7. **Model Performance & Comparison**
-8. **Explainability (SHAP)**
-9. **Streamlit App UI Preview**
-10. **PDF Report Example**
-11. **System Design Overview**
-12. **How to Run Locally**
-13. **Project Features**
-14. **Clinical Disclaimer**
-15. **Folder Structure**
-16. **Model Card (XGBoost)**
-17. **Limitations**
-18. **What I Learned**
-19. **About the Author**
+1. [Executive Summary](#executive-summary)
+2. [Problem Statement](#problem-statement)
+3. [Why Autism Detection Matters](#why-autism-detection-matters)
+4. [Dataset Description](#dataset-description)
+5. [Project Pipeline (ML Workflow)](#project-pipeline-ml-workflow)
+6. [System Architecture](#system-architecture)
+7. [Model Performance & Comparison](#model-performance--comparison)
+8. [Explainability (SHAP)](#explainability-shap)
+9. [Streamlit App UI Preview](#streamlit-app-ui-preview)
+10. [PDF Report Example](#pdf-report-example)
+11. [System Design Overview](#system-design-overview)
+12. [How to Run Locally](#how-to-run-locally)
+13. [Project Features](#project-features)
+14. [Clinical Disclaimer](#clinical-disclaimer)
+15. [Folder Structure](#folder-structure)
+16. [Model Card (XGBoost)](#xgboost-model-card)
+17. [Limitations](#limitations)
+18. [What I Learned](#what-i-learned)
+19. [About the Author](#about-the-author)
+
