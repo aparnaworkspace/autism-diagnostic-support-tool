@@ -180,4 +180,42 @@ flowchart LR
 - Fully compatible with **TreeSHAP** for transparent explainability
 - Fast, robust, and highly generalizable
 
+## Explainability (SHAP)
+
+This project uses **SHAP (SHapley Additive Explanations)** to provide
+transparent, interpretable insights into *why* the model predicts
+ASD Positive or Negative.
+
+### 🔍 Local SHAP (Per-Patient Explanation)
+Shows how each feature contributed to an individual prediction.
+
+Example:
+
+| Feature    | SHAP Value |
+|----------- |----------- |
+| a9_score   | -1.2110    |
+| a6_score   | -1.0042    |
+| a5_score   | -0.8661    |
+| a7_score   | -0.8091    |
+| a3_score   | -0.7645    |
+| a4_score   | -0.7368    |
+
+- **Negative SHAP** → pushes toward *ASD Negative*  
+- **Positive SHAP** → pushes toward *ASD Positive*  
+- **Larger magnitude** → stronger influence
+
+### 🌍 Global Explainability
+SHAP also generates global-level insights:
+
+- Which features influence predictions the most?
+- How strongly do AQ-10 symptoms contribute?
+- How does age or relation reporting affect outcomes?
+
+### 📊 SHAP Visuals (Included in /reports/)
+- `shap_bar.png` — Top feature importance  
+- `shap_beeswarm.png` — Global distribution of feature impact  
+- `shap_waterfall_sample_0.png` — Detailed breakdown for one patient
+
+These visuals improve *trust, accountability, and transparency* in
+machine learning decisions.
 
