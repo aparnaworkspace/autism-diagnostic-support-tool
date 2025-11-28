@@ -100,8 +100,7 @@ This explains the unusually high performance of ML models.
 
 ## ⭐ 5. Project Pipeline (ML Workflow)
 
-```mermaid
-flowchart LR
+
     A[Raw Data (UCI/Kaggle AQ-10)] --> B[Data Cleaning]
     B --> C[Feature Engineering (age_group, encoding)]
     C --> D[Label Encoding]
@@ -111,7 +110,7 @@ flowchart LR
     G --> H[SHAP Explainability (Local + Global)]
     H --> I[Streamlit App (Apple Health UI)]
     I --> J[PDF Report Generator]
-```
+
 
 
 
