@@ -271,4 +271,6 @@ One-click clinical-style PDF including:
 
 ![PDF](<img width="1680" height="1050" alt="Screenshot 2025-11-28 at 7 59 41 PM" src="https://github.com/user-attachments/assets/e6c8c7f4-2a69-438d-8f23-42cb5559a281" />
 )
+![PDF](<img width="1680" height="1050" alt="Screenshot 2025-11-28 at 7 59 41 PM" src="https://github.com/user-attachments/assets/56ecd049-ae7e-4631-b8f3-7f106e297048" />)
+
 
