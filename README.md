@@ -73,6 +73,44 @@ This project answers that by building a responsible, explainable ML-based suppor
 
 This project demonstrates how **XAI + ML** can enhance early screening accessibility.
 
+## Dataset Description
+
+**Source:**  
+UCI / Kaggle — Autism Screening Adults & Children Dataset
+
+**Dataset Type:**  
+Questionnaire-based binary classification (ASD vs Non-ASD)
+
+**Contents:**
+- **AQ-10** questionnaire (10 binary questions)
+- **Demographics:**  
+  age, gender, ethnicity, country of residence  
+- **Medical factors:** jaundice at birth  
+- **Social factors:** relation (parent/self), used autism app before  
+- **Target:** `class_asd`
+
+**Size:** ~700 samples  
+**Features:** 19  
+**Label distribution:** Balanced enough for supervised learning
+
+📌 **Note:**  
+The dataset is **small and highly separable** because AQ-10 questions are directly diagnostic.  
+This explains the unusually high performance of ML models.
+
+## ML Pipeline — End-to-End Workflow
+
+```mermaid
+flowchart LR
+    A[Raw Data\n(UCI/Kaggle AQ-10)] --> B[🧹 Data Cleaning]
+    B --> C[Feature Engineering\n(age_group, encoding)]
+    C --> D[Label Encoding]
+    D --> E[Train-Test Split]
+    E --> F[Model Training\n(XGBoost)]
+    F --> G[Evaluation\n(Accuracy, F1, AUC)]
+    G --> H[SHAP Explainability\n(Local + Global)]
+    H --> I[Streamlit App\nApple Health UI]
+    I --> J[PDF Report Generator]
+
 
 
 
