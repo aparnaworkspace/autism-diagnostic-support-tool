@@ -35,7 +35,7 @@
 18. [What I Learned](#what-i-learned)
 19. [About the Author](#about-the-author)
 
-## ⭐1. Executive Summary
+## Executive Summary
 
 This project delivers a complete end-to-end **Autism Diagnostic Support System** powered by an 
 optimized **XGBoost model**, **SHAP explainability**, and a premium **Apple-Health-inspired UI**.  
@@ -49,7 +49,7 @@ It transforms the AQ-10 screening questionnaire into an interactive risk-estimat
 
 It is designed for **learning**, **research demonstration**, and **portfolio value** — not for clinical diagnosis.  
 
-## ⭐2. Problem Statement
+## Problem Statement
 
 Millions of individuals remain undiagnosed or diagnosed late for Autism Spectrum Disorder (ASD) due to:
 
@@ -63,7 +63,7 @@ The challenge:
 
 This project answers that by building a responsible, explainable ML-based support system using the AQ-10 screening questionnaire.
 
-## ⭐3. Why Autism Detection Matters
+## Why Autism Detection Matters
 
 - ASD affects approximately **1 in 100 people** globally  
 - Early identification improves communication, social, and learning outcomes  
@@ -73,7 +73,7 @@ This project answers that by building a responsible, explainable ML-based suppor
 
 This project demonstrates how **XAI + ML** can enhance early screening accessibility.
 
-## ⭐4. Dataset Description
+## Dataset Description
 
 **Source:**  
 UCI / Kaggle — Autism Screening Adults & Children Dataset
@@ -98,10 +98,10 @@ The dataset is **small and highly separable** because AQ-10 questions are direct
 This explains the unusually high performance of ML models.
 
 
-## ⭐5. Project Pipeline (ML Workflow)
+## Project Pipeline (ML Workflow)
 
+```mermaid
 flowchart LR
-
     subgraph DATA[Data Preparation]
         A1[Raw Data<br/>(UCI/Kaggle AQ-10)]
         A2[Data Cleaning]
@@ -131,7 +131,7 @@ flowchart LR
     B2 --> B3
     B3 --> C1
     C1 --> C2
-
+```
 
     
 ## ⭐6. System Architecture Diagram
