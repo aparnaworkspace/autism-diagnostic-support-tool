@@ -35,7 +35,7 @@
 18. [What I Learned](#what-i-learned)
 19. [About the Author](#about-the-author)
 
-## Executive Summary
+## ⭐1. Executive Summary
 
 This project delivers a complete end-to-end **Autism Diagnostic Support System** powered by an 
 optimized **XGBoost model**, **SHAP explainability**, and a premium **Apple-Health-inspired UI**.  
@@ -49,7 +49,7 @@ It transforms the AQ-10 screening questionnaire into an interactive risk-estimat
 
 It is designed for **learning**, **research demonstration**, and **portfolio value** — not for clinical diagnosis.  
 
-## Problem Statement
+## ⭐2. Problem Statement
 
 Millions of individuals remain undiagnosed or diagnosed late for Autism Spectrum Disorder (ASD) due to:
 
@@ -63,7 +63,7 @@ The challenge:
 
 This project answers that by building a responsible, explainable ML-based support system using the AQ-10 screening questionnaire.
 
-## Why Autism Detection Matters
+## ⭐3. Why Autism Detection Matters
 
 - ASD affects approximately **1 in 100 people** globally  
 - Early identification improves communication, social, and learning outcomes  
@@ -73,7 +73,7 @@ This project answers that by building a responsible, explainable ML-based suppor
 
 This project demonstrates how **XAI + ML** can enhance early screening accessibility.
 
-## Dataset Description
+## ⭐4. Dataset Description
 
 **Source:**  
 UCI / Kaggle — Autism Screening Adults & Children Dataset
