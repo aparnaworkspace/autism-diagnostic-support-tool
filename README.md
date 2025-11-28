@@ -2,410 +2,275 @@
   <img src="banner04.png" width="100%" />
 </p>
 
-# 🧠 Autism Diagnostic Support System
-## XGBoost • SHAP Explainability • Apple-Health Inspired Clinical UI
+<h1 align="center">🧠 Autism Diagnostic Support System</h1>
+<p align="center"><b>XGBoost · SHAP Explainability · Apple-Health Inspired UI</b></p>
 
-A modern, end-to-end machine learning system that predicts Autism Spectrum Disorder (ASD) likelihood using the AQ-10 screening questionnaire, paired with transparent SHAP explainability, a clean Apple-Health-style UI, and clinical-style PDF report generation.
+<p align="center">
+  <img src="https://img.shields.io/badge/Machine%20Learning-XGBoost-blue?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Explainability-SHAP-purple?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/UI-Streamlit-green?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Python-3.10+-yellow?style=for-the-badge" />
+</p>
 
-This project is built for learning, explainability research, and portfolio showcasing — not clinical diagnosis.
 
-## ⭐ 1. Problem Statement
+## 📑 Table of Contents
 
-Early ASD screening is critical, yet millions remain undiagnosed due to:
+1. [Executive Summary](#executive-summary)
+2. [Problem Statement](#problem-statement)
+3. [Why Autism Detection Matters](#why-autism-detection-matters)
+4. [Dataset Description](#dataset-description)
+5. [Project Pipeline (ML Workflow)](#project-pipeline-ml-workflow)
+6. [System Architecture](#system-architecture)
+7. [Model Performance & Comparison](#model-performance--comparison)
+8. [Explainability (SHAP)](#explainability-shap)
+9. [Streamlit App UI Preview](#streamlit-app-ui-preview)
+10. [PDF Report Example](#pdf-report-example)
+11. [System Design Overview](#system-design-overview)
+12. [How to Run Locally](#how-to-run-locally)
+13. [Project Features](#project-features)
+14. [Clinical Disclaimer](#clinical-disclaimer)
+15. [Folder Structure](#folder-structure)
+16. [Model Card (XGBoost)](#xgboost-model-card)
+17. [Limitations](#limitations)
+18. [What I Learned](#what-i-learned)
+19. [About the Author](#about-the-author)
 
-Limited access to clinical specialists
+## Executive Summary
 
-Long hospital wait-times
+This project delivers a complete end-to-end **Autism Diagnostic Support System** powered by an 
+optimized **XGBoost model**, **SHAP explainability**, and a premium **Apple-Health-inspired UI**.  
+It transforms the AQ-10 screening questionnaire into an interactive risk-estimation tool with:
 
-Low awareness
+- 🧠 Real-time ASD probability prediction  
+- 🎯 Transparent SHAP feature attributions  
+- 🩺 Clean clinical-style interface  
+- 📄 Auto-generated PDF reports  
+- ⚡ A fully reproducible ML pipeline + documentation  
 
-Stigma or fear of evaluation
+It is designed for **learning**, **research demonstration**, and **portfolio value** — not for clinical diagnosis.  
 
-This project builds an interactive ML-powered support tool that makes ASD risk easier to screen using a validated AQ-10 questionnaire, while **ensuring explainability, transparency, and responsible UI design.**
+## Problem Statement
 
-## ⭐ 2. Why Autism Detection Matters
+Millions of individuals remain undiagnosed or diagnosed late for Autism Spectrum Disorder (ASD) due to:
 
-ASD affects 1 in 100 individuals worldwide
+- Limited access to clinical specialists  
+- Long waiting periods for assessments  
+- Lack of awareness or hesitation to seek help  
+- Resource constraints in low-income regions  
 
-Early detection improves social, cognitive, and language outcomes
+The challenge:  
+**How can we build a fast, transparent, accessible tool to support early ASD screening — without replacing clinical evaluation?**
 
-Digital screening tools support low-resource clinical settings
+This project answers that by building a responsible, explainable ML-based support system using the AQ-10 screening questionnaire.
 
-ML assists clinicians — but does not replace clinical evaluation
+## Why Autism Detection Matters
 
-This project explores how **ML + Explainable AI (XAI) can enhance early screening systems.**
+- ASD affects approximately **1 in 100 people** globally  
+- Early identification improves communication, social, and learning outcomes  
+- Screening gaps exist in rural and low-resource healthcare systems  
+- Digital tools can help triage cases early  
+- Machine learning can support clinicians — not replace them  
 
-## ⭐ 3. Dataset Description
+This project demonstrates how **XAI + ML** can enhance early screening accessibility.
 
-### Source:
+## Dataset Description
+
+**Source:**  
 UCI / Kaggle — Autism Screening Adults & Children Dataset
 
-### Contains:
+**Dataset Type:**  
+Questionnaire-based binary classification (ASD vs Non-ASD)
+
+**Contents:**
+- **AQ-10** questionnaire (10 binary questions)
+- **Demographics:**  
+  age, gender, ethnicity, country of residence  
+- **Medical factors:** jaundice at birth  
+- **Social factors:** relation (parent/self), used autism app before  
+- **Target:** `class_asd`
+
+**Size:** ~700 samples  
+**Features:** 19  
+**Label distribution:** Balanced enough for supervised learning
+
+📌 **Note:**  
+The dataset is **small and highly separable** because AQ-10 questions are directly diagnostic.  
+This explains the unusually high performance of ML models.
+
+
+## Project Pipeline (ML Workflow)
+
+
+    subgraph PREP[Data Preparation]
+        A1[Raw Data]
+        A2[Cleaning]
+        A3[Feature Engineering]
+        A4[Encoding]
+        A5[Train-Test Split]
+        A1 --> A2 --> A3 --> A4 --> A5
+    end
+
+    subgraph MODEL[Modeling]
+        B1[XGBoost Training]
+        B2[Evaluation]
+        B3[SHAP Explainability]
+        B1 --> B2 --> B3
+    end
+
+    subgraph APP[Application Layer]
+        C1[Streamlit App]
+        C2[PDF Report Generator]
+    end
+
+    A5 --> B1
+    B3 --> C1
+    C1 --> C2
+
+    
+## System Architecture Diagram
+
+```mermaid
+flowchart LR
+    subgraph UI[Streamlit Frontend]
+        A1[Input Form]
+        A2[Prediction Dashboard]
+        A3[PDF Report Button]
+    end
+
+    subgraph API[Backend Inference Layer]
+        B1[Preprocessing Pipeline]
+        B2[Label Encoders]
+        B3[StandardScaler]
+        B4[XGBoost Model]
+        B5[SHAP TreeExplainer]
+    end
+
+    subgraph Storage[Artifacts & Reports]
+        C1[models/]
+        C2[reports/]
+        C3[data/processed/]
+    end
+
+    %% Connections
+    A1 --> B1
+    B1 --> B2
+    B1 --> B3
+    B3 --> B4
+    B4 --> B5
+    B4 --> A2
+    B5 --> A2
+    A3 --> C2
+    B4 --> C1
+    B2 --> C1
+    B3 --> C1
+```
+
+## 7. Model Performance & Comparison
+
+| Model                 | Accuracy | F1 Score | Recall | AUC      |
+|----------------------|----------|----------|--------|----------|
+| Logistic Regression   | 1.00     | 1.00     | 1.00   | 0.99     |
+| Random Forest         | 0.94     | 0.89     | 0.84   | 0.996    |
+| XGBoost (Chosen)      | **0.986**| **0.974**| **0.974** | **0.9995** |
+| Neural Network (MLP)  | 1.00     | 1.00     | 1.00   | 1.00     |
+
+### 🏆 Why XGBoost Was Chosen
+- Best trade-off between **accuracy**, **stability**, and **interpretability**
+- Works extremely well on **small structured datasets**
+- Fully compatible with **TreeSHAP** for transparent explainability
+- Fast, robust, and highly generalizable
 
-AQ-10 responses (10 binary items)
+## Explainability (SHAP)
 
-Demographics: age, gender, ethnicity, country
+This project uses **SHAP (SHapley Additive Explanations)** to provide
+transparent, interpretable insights into *why* the model predicts
+ASD Positive or Negative.
 
-Jaundice, family relation
+### 🔍 Local SHAP (Per-Patient Explanation)
+Shows how each feature contributed to an individual prediction.
 
-"Used autism app before"
+Example:
 
-Target: class_asd
+| Feature    | SHAP Value |
+|----------- |----------- |
+| a9_score   | -1.2110    |
+| a6_score   | -1.0042    |
+| a5_score   | -0.8661    |
+| a7_score   | -0.8091    |
+| a3_score   | -0.7645    |
+| a4_score   | -0.7368    |
 
-### Size: ~700 rows
-### Type: Questionnaire-based classification
+- **Negative SHAP** → pushes toward *ASD Negative*  
+- **Positive SHAP** → pushes toward *ASD Positive*  
+- **Larger magnitude** → stronger influence
 
-📌 Note: Dataset is small and diagnostic by design → high model accuracy.
+### 🌍 Global Explainability
+SHAP also generates global-level insights:
 
-## ⭐ 4. Project Pipeline (ML Workflow)
+- Which features influence predictions the most?
+- How strongly do AQ-10 symptoms contribute?
+- How does age or relation reporting affect outcomes?
 
+### 📊 SHAP Visuals (Included in /reports/)
+-![shap bar](your-link-here)— Top feature importance  
+-![shap beeswarm](your-link-here)— Global distribution of feature impact  
+-![shap waterfall](your-link-here) — Detailed breakdown for one patient
 
-A[Raw Data] --> B[Data Cleaning]
+These visuals improve *trust, accountability, and transparency* in
+machine learning decisions.
 
-B --> C[Feature Engineering]
+## Streamlit App UI Preview
 
-C --> D[Label Encoding]
+The application is designed in a **clean, Apple-Health inspired interface**  
+with soft white cards, rounded corners, teal accents, and clear readability.
 
-D --> E[Train-Test Split]
+### Home / Prediction Dashboard
+Shows:
+- Patient summary  
+- Probability ring  
+- AQ-10 score card  
+- Risk level card  
+- SHAP feature explanation  
 
-E --> F[XGBoost Training]
+![Dashboard](<img width="1634" height="920" alt="Screenshot 2025-11-26 at 8 20 56 AM" src="https://github.com/user-attachments/assets/560f6f2c-3473-4ee3-94e9-b0c9c9e3b45a" />
+)
 
-F --> G[Model Evaluation]
+---
 
-G --> H[SHAP Explainability]
+### Patient Input Form
+Features:
+- Age, gender and relation reporting  
+- Optional advanced demographics  
+- AQ-10 (0/1) questionnaire  
+- “Save Input” sidebar workflow  
 
-H --> I[Streamlit App + PDF Report]
+![Input Form](<img width="1643" height="919" alt="Screenshot 2025-11-26 at 8 21 40 AM" src="https://github.com/user-attachments/assets/c6959ef0-0e12-46e9-81e2-9e6503ffe6fb" />
+)
 
-I --> J[Deployment]
+---
 
-## ⭐ 5. System Architecture Diagram
+### SHAP Explanation Section
+Provides:
+- Top feature contributions  
+- Local explanation table  
+- Bar chart
+  
+![SHAP Local](<img width="1624" height="919" alt="Screenshot 2025-11-26 at 8 22 04 AM" src="https://github.com/user-attachments/assets/9cbd2ded-ecd4-4a10-a1de-99cca15fe475" />
+)
 
-UI[Streamlit UI] --> API
+---
 
-API[Prediction Engine] --> Model[XGBoost Model]
+### PDF Report Generator
+One-click clinical-style PDF including:
+- Prediction  
+- Probability  
+- Risk level  
+- AQ-10 score  
+- Recommendations  
+- SHAP feature list  
 
-API --> Scaler[StandardScaler]
+![PDF](<img width="1680" height="1050" alt="Screenshot 2025-11-28 at 7 59 41 PM" src="https://github.com/user-attachments/assets/e6c8c7f4-2a69-438d-8f23-42cb5559a281" />
+)
+![PDF](<img width="1680" height="1050" alt="Screenshot 2025-11-28 at 7 59 41 PM" src="https://github.com/user-attachments/assets/56ecd049-ae7e-4631-b8f3-7f106e297048" />)
 
-API --> Encoders[Label Encoders]
 
-Model --> SHAP[TreeExplainer]
-
-SHAP --> UI
-
-API --> Report[PDF Generator]
-
-## ⭐ 6. Screenshot Previews
-
-### 📱 Home / Prediction Dashboard
-
-
-[Home]
-<img width="1634" height="920" alt="Screenshot 2025-11-26 at 8 20 56 AM" src="https://github.com/user-attachments/assets/220a8538-6a02-41b0-97e0-60737187011b" />
-
-[Prediction]
-<img width="1643" height="919" alt="Screenshot 2025-11-26 at 8 21 40 AM" src="https://github.com/user-attachments/assets/7d08017c-18f1-4842-bda1-a7cdca3373e9" />
-
-
-### 📝 PDF Report
-
-[PDF]
-
-<img width="710" height="546" alt="Screenshot 2025-11-26 at 7 52 03 AM" src="https://github.com/user-attachments/assets/e447423b-4165-4282-921e-3cfd676ffe0b" />
-
-
-## ⭐ 7. SHAP Local Explanation (Per-Patient)
-
-This section shows why XGBoost predicted ASD Positive/Negative.
-
-SHAP assigns each feature a positive (toward ASD+) or negative (toward ASD−) contribution.
-
-### 📌 Example Local SHAP Output
-
-| Feature  | SHAP Value |
-| -------- | ---------- |
-| a9_score | -1.2110    |
-| a6_score | -1.0042    |
-| a5_score | -0.8661    |
-| a7_score | -0.8091    |
-| a3_score | -0.7645    |
-| a4_score | -0.7368    |
-
-
-### 🔎 Interpretation
-
-**Negative SHAP** → pushes prediction toward ASD Negative
-
-**Positive SHAP** → pushes prediction toward ASD Positive
-
-**Larger magnitude** → stronger contribution
-
-Explainability improves transparency, trust, and model accountability.
-
-## ⭐ 8. Model Comparison Table
-
-| Model               | Accuracy | F1 Score | Recall | AUC    |
-|---------------------|----------|----------|--------|--------|
-| Logistic Regression | 1.00     | 1.00     | 1.00   | 0.99   |
-| Random Forest       | 0.94     | 0.89     | 0.84   | 0.996  |
-| XGBoost (Chosen)    | 0.986    | 0.974    | 0.974  | 0.9995 |
-| Neural Network      | 1.00     | 1.00     | 1.00   | 1.00   |
-
-
-## ⭐ 9. Model Stack
-
-### Core Model
-
-XGBoost Classifier
-
-Optimized for small, structured datasets
-
-Supports TreeSHAP → fast & reliable explainability
-
-### Explainability
-
-SHAP TreeExplainer
-
-Local + Global contributions
-
-Top-6 features shown
-
-## ⭐ 10. SHAP Example Images
-
-### 📌 Local SHAP Bar Plot
-
-[SHAP Bar]
-
-<img width="800" height="1100" alt="shap_bar" src="https://github.com/user-attachments/assets/c3a85107-179f-402f-a47a-1d5676b14189" />
-
-
-### 📌 SHAP Beeswarm (Global)
-
-[SHAP Beeswarm]
-
-<img width="800" height="910" alt="shap_beeswarm" src="https://github.com/user-attachments/assets/00109a6d-889b-4866-a9a4-d9a827ff1974" />
-
-
-### 📌 SHAP Waterfall (Per-sample)
-
-[SHAP Waterfall]
-
-<img width="800" height="650" alt="shap_waterfall_sample_0" src="https://github.com/user-attachments/assets/ce7e3ce4-f2d8-4087-9ac0-f11fb8cb4c8b" />
-
-
-## ⭐ 11. PDF Report Example
-
-The app generates a clinical-style PDF summarizing:
-
-Prediction
-
-Probability
-
-AQ-10 Score
-
-Risk Level
-
-Recommendation
-
-Top SHAP Features
-
-<img width="1624" height="919" alt="Screenshot 2025-11-26 at 8 22 04 AM" src="https://github.com/user-attachments/assets/fc1c0aa2-7e27-4d9b-8bdf-594269ebbdc1" />
-
-
-## ⭐ 12. System Design Overview
-
-### Backend
-
-XGBoost inference pipeline
-
-Label encoding + scaling
-
-Age-group engineered feature
-
-SHAP explainability
-
-### Frontend
-
-Apple-Health inspired UI
-
-Soft shadows, rounded cards
-
-Real-time probability ring
-
-PDF generation
-
-### Storage
-
-/models/ → ML artifacts
-
-/reports/ → SHAP outputs + visuals
-
-## ⭐ 13. How to Run Locally
-git clone https://github.com/aparnaworkspace/autism-diagnostic-support-tool
-cd autism-diagnostic-support-tool
-
-
-Create venv:
-
-python3 -m venv venv
-source venv/bin/activate
-
-
-Install dependencies:
-
-pip install -r requirements.txt
-
-
-Run the Streamlit app:
-
-streamlit run app/streamlit_app.py
-
-## ⭐ 14. Features (Screenshots Section)
-
-Include images for:
-
-Input Form
-
-Prediction Card
-
-SHAP Charts
-
-Risk Level Card
-
-PDF Button
-
-Final Output
-
-## ⭐ 15. Clinical Disclaimer
-
-⚠️ This is NOT a diagnostic tool.
-It is a **portfolio / educational project.**
-
-Autism diagnosis requires:
-
-Behavioural observation
-
-Clinical interviews
-
-Developmental history
-
-Neuropsychological testing
-
-Genetic & neurological evaluation
-
-## ⭐ 16. Folder Structure
-
-
-autism-diagnostic-support-tool/
-
-│
-├── app/
-
-│   └── streamlit_app.py
-
-├── data/
-
-│   ├── raw/
-
-│   └── processed/
-
-├── models/
-
-│   ├── best_model.pkl
-
-│   ├── scaler.pkl
-
-│   ├── label_encoders.pkl
-
-│   └── shap_explainer_and_values.pkl
-
-├── notebooks/
-
-│   ├── 01_EDA.ipynb
-
-│   ├── 02_Feature_Engineering.ipynb
-
-│   └── 03_Model_Training.ipynb
-
-├── reports/
-
-├── src/
-
-│   ├── preprocess.py
-
-│   ├── train_model.py
-
-│   ├── risk_scoring.py
-
-│   └── explainability.py
-
-└── README.md
-
-## ⭐ 17. XGBoost Model Card
-
-**Model:** XGBoostClassifier
-
-**Task:** Binary classification (ASD / non-ASD)
-
-**Features:** 19
-
-**Explainability:** SHAP TreeExplainer
-
-**Intended Use:** Educational demo
-
-### Strengths
-
-Very strong performance
-
-Fast inference
-
-Deep explainability
-
-Works well with structured data
-
-### Risks
-
-Small dataset → risks overfitting
-
-Questionnaire-based data → high separability
-
-May not generalize outside dataset
-
-## ⭐ 18. Limitations
-
-### Dataset
-
-Small (<800 rows)
-
-Highly diagnostic questions → easy classification
-
-No behavioural/video/MRI data
-
-### Model
-
-Cannot replace clinical evaluations
-
-Contains dataset biases
-
-### App
-
-Built for learning, portfolio, and research
-
-## ⭐ 19. What I Learned
-
-Full ML pipeline design
-
-XGBoost tuning
-
-SHAP explainability
-
-Streamlit UI engineering
-
-Apple-Health style UI creation
-
-PDF report generation
-
-ML ethics & model cards
-
-GitHub project structure
-
-End-to-end deployment workflow
