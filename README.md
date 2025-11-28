@@ -24,16 +24,12 @@
 7. [Model Performance & Comparison](#model-performance--comparison)
 8. [Explainability (SHAP)](#explainability-shap)
 9. [Streamlit App UI Preview](#streamlit-app-ui-preview)
-10. [PDF Report Example](#pdf-report-example)
-11. [System Design Overview](#system-design-overview)
-12. [How to Run Locally](#how-to-run-locally)
-13. [Project Features](#project-features)
-14. [Clinical Disclaimer](#clinical-disclaimer)
-15. [Folder Structure](#folder-structure)
-16. [Model Card (XGBoost)](#xgboost-model-card)
-17. [Limitations](#limitations)
-18. [What I Learned](#what-i-learned)
-19. [About the Author](#about-the-author)
+10. [Project Features](#project-features)
+11. [How to Run Locally](#how-to-run-locally)
+12. [Folder Structure](#folder-structure)
+13. [Clinical Disclaimer](#clinical-disclaimer)
+14. [Limitations](#limitations)
+
 
 ## Executive Summary
 
@@ -231,9 +227,7 @@ Shows:
 - AQ-10 score card  
 - Risk level card  
 - SHAP feature explanation  
-
-![Dashboard](<img width="1634" height="920" alt="Screenshot 2025-11-26 at 8 20 56 AM" src="https://github.com/user-attachments/assets/560f6f2c-3473-4ee3-94e9-b0c9c9e3b45a" />
-)
+![Dashboard](#)<img width="1634" height="920" alt="Screenshot 2025-11-26 at 8 20 56 AM" src="https://github.com/user-attachments/assets/40fba9dc-7134-4f65-a5a5-042837833fcd" />
 
 ---
 
