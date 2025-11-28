@@ -1,9 +1,21 @@
-<p align="center"> <img src="banner04.png" width="100%" /> </p> <h1 align="center">🧠 Autism Diagnostic Support System</h1> <p align="center"><b>XGBoost · SHAP Explainability · Streamlit Clinical UI</b></p> <p align="center"> <img src="https://img.shields.io/badge/Machine%20Learning-XGBoost-blue?style=for-the-badge" /> <img src="https://img.shields.io/badge/Explainability-SHAP-purple?style=for-the-badge" /> <img src="https://img.shields.io/badge/UI-Streamlit-green?style=for-the-badge" /> <img src="https://img.shields.io/badge/Python-3.10+-yellow?style=for-the-badge" /> </p>
-🔍 Executive Summary
+<p align="center">
+  <img src="banner04.png" width="100%" />
+</p>
+
+<h1 align="center">🧠 Autism Diagnostic Support System</h1>
+<p align="center"><b>XGBoost · SHAP Explainability · Apple-Health Inspired UI</b></p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Machine%20Learning-XGBoost-blue?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Explainability-SHAP-purple?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/UI-Streamlit-green?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Python-3.10+-yellow?style=for-the-badge" />
+</p>
+
 
 A modern, end-to-end Autism Screening Support System built using:
 
-XGBoost (high-performance ML classifier)
+XGBoost (high-performance ML classifier)\
 
 SHAP Explainability (clinical-style feature attributions)
 
