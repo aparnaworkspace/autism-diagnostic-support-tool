@@ -100,7 +100,7 @@ This explains the unusually high performance of ML models.
 ## ML Pipeline — End-to-End Workflow
 
 ```mermaid
-flowchart LR
+... flowchart LR
     A[Raw Data\n(UCI/Kaggle AQ-10)] --> B[🧹 Data Cleaning]
     B --> C[Feature Engineering\n(age_group, encoding)]
     C --> D[Label Encoding]
@@ -109,7 +109,8 @@ flowchart LR
     F --> G[Evaluation\n(Accuracy, F1, AUC)]
     G --> H[SHAP Explainability\n(Local + Global)]
     H --> I[Streamlit App\nApple Health UI]
-    I --> J[PDF Report Generator]
+    I --> J[PDF Report Generator]...
+
 
 
 
