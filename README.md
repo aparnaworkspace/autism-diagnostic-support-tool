@@ -13,25 +13,6 @@
 </p>
 
 
-## 🚀 Executive Summary
-
-This project delivers a complete, production-style **Autism Diagnostic Support System** built end-to-end with:
-
-- **XGBoost** for highly accurate questionnaire-based ASD prediction  
-- **SHAP Explainability** for transparent, per-patient reasoning  
-- **A modern Apple-Health-inspired UI** built in Streamlit  
-- **A clinical-style PDF report generator**  
-- **A full ML workflow**: data cleaning → feature engineering → model training → evaluation → explainability → deployment  
-
-The system transforms raw AQ-10 questionnaire responses into an interpretable ASD likelihood score while prioritizing:
-
-- Fairness  
-- Transparency  
-- Clear communication of risk  
-- Non-clinical, educational use only  
-
-This is a **machine learning project** designed to demonstrate my ability to build real-world ML systems—not just train a model.
-
 ## 📑 Table of Contents
 
 1. [Executive Summary](#executive-summary)
@@ -53,4 +34,45 @@ This is a **machine learning project** designed to demonstrate my ability to bui
 17. [Limitations](#limitations)
 18. [What I Learned](#what-i-learned)
 19. [About the Author](#about-the-author)
+
+## Executive Summary
+
+This project delivers a complete end-to-end **Autism Diagnostic Support System** powered by an 
+optimized **XGBoost model**, **SHAP explainability**, and a premium **Apple-Health-inspired UI**.  
+It transforms the AQ-10 screening questionnaire into an interactive risk-estimation tool with:
+
+- 🧠 Real-time ASD probability prediction  
+- 🎯 Transparent SHAP feature attributions  
+- 🩺 Clean clinical-style interface  
+- 📄 Auto-generated PDF reports  
+- ⚡ A fully reproducible ML pipeline + documentation  
+
+It is designed for **learning**, **research demonstration**, and **portfolio value** — not for clinical diagnosis.  
+
+## Problem Statement
+
+Millions of individuals remain undiagnosed or diagnosed late for Autism Spectrum Disorder (ASD) due to:
+
+- Limited access to clinical specialists  
+- Long waiting periods for assessments  
+- Lack of awareness or hesitation to seek help  
+- Resource constraints in low-income regions  
+
+The challenge:  
+**How can we build a fast, transparent, accessible tool to support early ASD screening — without replacing clinical evaluation?**
+
+This project answers that by building a responsible, explainable ML-based support system using the AQ-10 screening questionnaire.
+
+## Why Autism Detection Matters
+
+- ASD affects approximately **1 in 100 people** globally  
+- Early identification improves communication, social, and learning outcomes  
+- Screening gaps exist in rural and low-resource healthcare systems  
+- Digital tools can help triage cases early  
+- Machine learning can support clinicians — not replace them  
+
+This project demonstrates how **XAI + ML** can enhance early screening accessibility.
+
+
+
 
