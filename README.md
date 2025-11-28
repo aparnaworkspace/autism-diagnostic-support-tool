@@ -100,16 +100,39 @@ This explains the unusually high performance of ML models.
 
 ## ⭐5. Project Pipeline (ML Workflow)
 
+flowchart LR
 
-    A[Raw Data (UCI/Kaggle AQ-10)] --> B[Data Cleaning]
-    B --> C[Feature Engineering (age_group, encoding)]
-    C --> D[Label Encoding]
-    D --> E[Train-Test Split]
-    E --> F[Model Training (XGBoost)]
-    F --> G[Evaluation (Accuracy, F1, AUC)]
-    G --> H[SHAP Explainability (Local + Global)]
-    H --> I[Streamlit App (Apple Health UI)]
-    I --> J[PDF Report Generator]
+    subgraph DATA[Data Preparation]
+        A1[Raw Data<br/>(UCI/Kaggle AQ-10)]
+        A2[Data Cleaning]
+        A3[Feature Engineering<br/>(age_group, encoding)]
+        A4[Label Encoding]
+        A5[Train-Test Split]
+    end
+
+    subgraph MODEL[Modeling & Evaluation]
+        B1[XGBoost Training]
+        B2[Model Evaluation<br/>(Accuracy, F1, AUC)]
+        B3[SHAP Explainability<br/>(Local + Global)]
+    end
+
+    subgraph APP[App & Reporting Layer]
+        C1[Streamlit App<br/>(Apple Health UI)]
+        C2[PDF Report Generator]
+    end
+
+    %% PIPELINE FLOW
+    A1 --> A2
+    A2 --> A3
+    A3 --> A4
+    A4 --> A5
+    A5 --> B1
+    B1 --> B2
+    B2 --> B3
+    B3 --> C1
+    C1 --> C2
+
+
     
 ## ⭐6. System Architecture Diagram
 
