@@ -97,21 +97,23 @@ Questionnaire-based binary classification (ASD vs Non-ASD)
 The dataset is **small and highly separable** because AQ-10 questions are directly diagnostic.  
 This explains the unusually high performance of ML models.
 
-## ML Pipeline — End-to-End Workflow
+
+
+## ⭐ 5. Project Pipeline (ML Workflow)
 
 ```mermaid
+flowchart LR
+    A[📥 Raw Data (UCI/Kaggle AQ-10)] --> B[🧹 Data Cleaning]
+    B --> C[🔧 Feature Engineering (age_group, encoding)]
+    C --> D[🏷️ Label Encoding]
+    D --> E[✂️ Train-Test Split]
+    E --> F[🚀 Model Training (XGBoost)]
+    F --> G[📊 Evaluation (Accuracy, F1, AUC)]
+    G --> H[🧠 SHAP Explainability (Local + Global)]
+    H --> I[🖥️ Streamlit App (Apple Health UI)]
+    I --> J[📄 PDF Report Generator]
+```
 
-
- flowchart LR
-    A[Raw Data\n(UCI/Kaggle AQ-10)] --> B[🧹 Data Cleaning]
-    B --> C[Feature Engineering\n(age_group, encoding)]
-    C --> D[Label Encoding]
-    D --> E[Train-Test Split]
-    E --> F[Model Training\n(XGBoost)]
-    F --> G[Evaluation\n(Accuracy, F1, AUC)]
-    G --> H[SHAP Explainability\n(Local + Global)]
-    H --> I[Streamlit App\nApple Health UI]
-    I --> J[PDF Report Generator]
 
 
 
