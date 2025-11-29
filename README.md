@@ -37,20 +37,20 @@
 
 ## 📑 Table of Contents
 
-1. [Problem Statement](#problem-statement)
-2. [Why Autism Detection Matters](#why-autism-detection-matters)
-3. [Dataset Description](#dataset-description)
-4. [Project Pipeline (ML Workflow)](#project-pipeline-ml-workflow)
-5. [System Architecture](#system-architecture)
-6. [Model Performance & Comparison](#model-performance--comparison)
-7. [Explainability (SHAP)](#explainability-shap)
-8. [Streamlit App UI Preview](#streamlit-app-ui-preview)
-9. [Project Features](#project-features)
-10. [How to Run Locally](#how-to-run-locally)
-11. [Folder Structure](#folder-structure)
-12. [Clinical Disclaimer](#clinical-disclaimer)
-12. [Limitations](#limitations)
-13. [Contact](#contact)
+1. [1. Problem Statement](#1.problem-statement)
+2. [2. Why Autism Detection Matters](#2.why-autism-detection-matters)
+3. [3. Dataset Description](#3.dataset-description)
+4. [4. Project Pipeline (ML Workflow)](#4.project-pipeline-ml-workflow)
+5. [5. System Architecture](#5.system-architecture)
+6. [6. Model Performance & Comparison](#6.model-performance--comparison)
+7. [7. Explainability (SHAP)](#7.explainability-shap)
+8. [8. Streamlit App UI Preview](#8.streamlit-app-ui-preview)
+9. [9. Project Features](#9.project-features)
+10. [10. How to Run Locally](#10.how-to-run-locally)
+11. [11. Folder Structure](#11.folder-structure)
+12. [12. Clinical Disclaimer](#12.clinical-disclaimer)
+13. [13. Limitations](#13.limitations)
+14. [14. Contact](#14.contact)
 
 ## Problem Statement
 
