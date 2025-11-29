@@ -134,46 +134,22 @@ flowchart LR
 ## System Architecture Diagram
 
 ```mermaid
-flowchart TB
+flowchart LR
 
-    %% ========== FRONTEND ==========
     subgraph UI[Streamlit Frontend]
-        UI1[Input Form]
-        UI2[Prediction Dashboard]
-        UI3[PDF Report Button]
+        A[User Inputs & Dashboard]
     end
 
-    %% ========== BACKEND ==========
-    subgraph BE[Backend Inference Layer]
-        BE1[Preprocessing]
-        BE2[Label Encoders]
-        BE3[Scaler]
-        BE4[XGBoost Model]
-        BE5[SHAP Explainer]
+    subgraph BE[Backend Model Layer]
+        B[Preprocessing → XGBoost Model → SHAP Explainability]
     end
 
-    %% ========== ARTIFACTS ==========
-    subgraph AR[Artifacts and Reports]
-        AR1[models folder]
-        AR2[reports folder]
-        AR3[data processed]
+    subgraph AR[Artifacts & Reports]
+        C[Models • Processed Data • PDF Reports]
     end
 
-    %% ========== FLOWS ==========
-    UI1 --> BE1
-    BE1 --> BE2
-    BE1 --> BE3
-    BE3 --> BE4
-    BE4 --> BE5
+    A --> B --> C
 
-    BE4 --> UI2
-    BE5 --> UI2
-
-    UI3 --> AR2
-
-    BE4 --> AR1
-    BE2 --> AR1
-    BE3 --> AR1
 
 ```
 
@@ -215,13 +191,6 @@ Example:
 - **Negative SHAP** → pushes toward *ASD Negative*  
 - **Positive SHAP** → pushes toward *ASD Positive*  
 - **Larger magnitude** → stronger influence
-
-### 🌍 Global Explainability
-SHAP also generates global-level insights:
-
-- Which features influence predictions the most?
-- How strongly do AQ-10 symptoms contribute?
-- How does age or relation reporting affect outcomes?
 
 ## Streamlit App — UI Gallery
 <details> <summary><strong>📸 Click to expand full UI + SHAP gallery</strong></summary> <br>
