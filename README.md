@@ -37,22 +37,22 @@
 
 ## 📑 Table of Contents
 
-1. [1. Problem Statement](#1.problem-statement)
-2. [2. Why Autism Detection Matters](#2.why-autism-detection-matters)
-3. [3. Dataset Description](#3.dataset-description)
-4. [4. Project Pipeline (ML Workflow)](#4.project-pipeline-ml-workflow)
-5. [5. System Architecture](#5.system-architecture)
-6. [6. Model Performance & Comparison](#6.model-performance--comparison)
-7. [7. Explainability (SHAP)](#7.explainability-shap)
-8. [8. Streamlit App UI Preview](#8.streamlit-app-ui-preview)
-9. [9. Project Features](#9.project-features)
-10. [10. How to Run Locally](#10.how-to-run-locally)
-11. [11. Folder Structure](#11.folder-structure)
-12. [12. Clinical Disclaimer](#12.clinical-disclaimer)
-13. [13. Limitations](#13.limitations)
-14. [14. Contact](#14.contact)
+1. [Problem Statement](#problem-statement)
+2. [Why Autism Detection Matters](#why-autism-detection-matters)
+3. [Dataset Description](#dataset-description)
+4. [Project Pipeline (ML Workflow)](#project-pipeline-ml-workflow)
+5. [System Architecture](#system-architecture)
+6. [Model Performance & Comparison](#model-performance--comparison)
+7. [Explainability (SHAP)](#explainability-shap)
+8. [Streamlit App UI Preview](#streamlit-app-ui-preview)
+9. [Project Features](#project-features)
+10. [How to Run Locally](#how-to-run-locally)
+11. [Folder Structure](#folder-structure)
+12. [Clinical Disclaimer](#clinical-disclaimer)
+13. [Limitations](#limitations)
+14. [Contact](#contact)
 
-## 1. Problem Statement
+## Problem Statement
 
 Millions of individuals remain undiagnosed or diagnosed late for Autism Spectrum Disorder (ASD) due to:
 
@@ -66,7 +66,7 @@ The challenge:
 
 This project answers that by building a responsible, explainable ML-based support system using the AQ-10 screening questionnaire.
 
-## 2. Why Autism Detection Matters
+## Why Autism Detection Matters
 
 - ASD affects approximately **1 in 100 people** globally  
 - Early identification improves communication, social, and learning outcomes  
@@ -76,7 +76,7 @@ This project answers that by building a responsible, explainable ML-based suppor
 
 This project demonstrates how **XAI + ML** can enhance early screening accessibility.
 
-## 3. Dataset Description
+## Dataset Description
 
 **Source:**  
 UCI / Kaggle — Autism Screening Adults & Children Dataset
@@ -101,7 +101,7 @@ The dataset is **small and highly separable** because AQ-10 questions are direct
 This explains the unusually high performance of ML models.
 
 
-## 4. Project Pipeline (ML Workflow)
+## Project Pipeline (ML Workflow)
 
 
     subgraph PREP[Data Preparation]
@@ -130,7 +130,7 @@ This explains the unusually high performance of ML models.
     C1 --> C2
 
     
-## 5. System Architecture Diagram
+## System Architecture Diagram
 
 ```mermaid
 flowchart LR
@@ -168,7 +168,7 @@ flowchart LR
     B3 --> C1
 ```
 
-## 6. Model Performance & Comparison
+## Model Performance & Comparison
 
 | Model                 | Accuracy | F1 Score | Recall | AUC      |
 |----------------------|----------|----------|--------|----------|
@@ -183,7 +183,7 @@ flowchart LR
 - Fully compatible with **TreeSHAP** for transparent explainability
 - Fast, robust, and highly generalizable
 
-## 7. Explainability (SHAP)
+## Explainability (SHAP)
 
 This project uses **SHAP (SHapley Additive Explanations)** to provide
 transparent, interpretable insights into *why* the model predicts
@@ -214,7 +214,7 @@ SHAP also generates global-level insights:
 - How strongly do AQ-10 symptoms contribute?
 - How does age or relation reporting affect outcomes?
 
-## 8. Streamlit App — UI Gallery
+## Streamlit App — UI Gallery
 <details> <summary><strong>📸 Click to expand full UI + SHAP gallery</strong></summary> <br>
   
 🏠 Home Dashboard
@@ -250,7 +250,7 @@ SHAP also generates global-level insights:
 
 </details>
 
-## 9. Project Features
+## Project Features
 <details> <summary><strong>✨ Click to expand Feature Highlights</strong></summary> <br>
   
 ### 💡 Core Features
@@ -341,7 +341,7 @@ Works locally or on cloud platforms (Streamlit Cloud)
 
 </details>
 
-## 10. How to Run Locally
+## How to Run Locally
 
 Follow the steps below to run the Autism Diagnostic Support System on your machine.
 
@@ -388,7 +388,7 @@ To explore EDA or model training:
 jupyter lab
 ```
 
-## 11. Folder Structure
+## Folder Structure
 
 A well-structured, production-style codebase:
 
@@ -454,7 +454,7 @@ autism-diagnostic-support-tool/
 ├── requirements.txt
 └── README.md
 ```
-## 12. Clinical Disclaimer
+## Clinical Disclaimer
 
 ⚠️ This tool is NOT a diagnostic system.
 
@@ -483,7 +483,7 @@ genetics & neurological analysis
 No machine-learning model, screening questionnaire, or digital tool can replace professional evaluation.
 This project should not be used for medical, clinical, or therapeutic decision-making.
 
-## 13. Limitations
+## Limitations
 
 Despite strong performance, the project has important limitations that recruiters and reviewers should know:
 
@@ -517,7 +517,7 @@ SHAP helps explain decisions but does not guarantee model fairness
 
 PDF reports are educational summaries, not clinical documents
 
-## 14. Contact
+## Contact
 If you’d like to connect or discuss this project:
 📧 aparnasajeevan16@gmail.com 
 🔗 LinkedIn:www.linkedin.com/in/aparnasajeevan1610
