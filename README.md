@@ -207,7 +207,7 @@ SHAP also generates global-level insights:
 - How strongly do AQ-10 symptoms contribute?
 - How does age or relation reporting affect outcomes?
 
-## 10. Streamlit App — UI Gallery
+## Streamlit App — UI Gallery
 <details> <summary><strong>📸 Click to expand full UI + SHAP gallery</strong></summary> <br>
   
 🏠 Home Dashboard
@@ -240,5 +240,96 @@ SHAP also generates global-level insights:
 
 ✔️ Calibration Curve
 <p align="center"> <img src="assets/calibration_curve.png" width="80%"> </p>
+
+</details>
+
+## Project Features
+<details> <summary><strong>✨ Click to expand Feature Highlights</strong></summary> <br>
+  
+💡 Core Features
+
+ASD Risk Prediction using an optimized XGBoost classifier
+
+Apple-Health Inspired UI with clean, clinical-style cards
+
+Real-time Probability Ring that visualizes ASD+ likelihood
+
+AQ-10 Questionnaire Input (10 binary symptom questions)
+
+Demographic Inputs with encoded categorical features
+
+Dynamic Risk Scoring based on total AQ-10 + age
+
+SHAP Explainability (local + global)
+
+🧠 Explainability Features
+
+Local SHAP force explanation (per patient)
+
+Global beeswarm + bar importance plots
+
+Waterfall plot for individual predictions
+
+Top 6 contributing features displayed in-dashboard
+
+📄 PDF Report Generator
+
+Exports a clinical-style report containing:
+
+Prediction
+
+Probability
+
+AQ-10 score
+
+Risk level
+
+Recommendation
+
+Top SHAP contributions
+
+Great for portfolio + recruiters.
+
+📚 Machine Learning Pipeline
+
+Preprocessing: encoding + feature engineering
+
+Train/test split
+
+XGBoost model training
+
+ROC, AUC, confusion matrix, calibration
+
+Serialized model artifacts saved in /models/
+
+🧪 Evaluation & Model Monitoring
+
+Confusion Matrix
+
+ROC Curve
+
+Calibration Curve
+
+Model Comparison Table
+
+SHAP-based auditing
+
+🏗️ Software Architecture Highlights
+
+Clear separation of concerns (src/, app/, models/, notebooks/)
+
+Production-like artifact loading in Streamlit
+
+Modular risk scoring function
+
+Explainability integrated into UI
+
+🚀 Deployment-Ready
+
+Fully packaged Streamlit app
+
+GitHub-friendly structure
+
+Works locally or on cloud platforms (Streamlit Cloud)
 
 </details>
