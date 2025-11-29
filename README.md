@@ -207,64 +207,36 @@ SHAP also generates global-level insights:
 - How strongly do AQ-10 symptoms contribute?
 - How does age or relation reporting affect outcomes?
 
-### 📊 SHAP Visuals (Included in /reports/)
--![shap bar](your-link-here)— Top feature importance  
--![shap beeswarm](your-link-here)— Global distribution of feature impact  
--![shap waterfall](your-link-here) — Detailed breakdown for one patient
-
-These visuals improve *trust, accountability, and transparency* in
-machine learning decisions.
-
-## Streamlit App UI Preview
-
-The application is designed in a **clean, Apple-Health inspired interface**  
-with soft white cards, rounded corners, teal accents, and clear readability.
-
-### Home / Prediction Dashboard
-Shows:
-- Patient summary  
-- Probability ring  
-- AQ-10 score card  
-- Risk level card  
-- SHAP feature explanation  
-![Dashboard](#)<img width="1634" height="920" alt="Screenshot 2025-11-26 at 8 20 56 AM" src="https://github.com/user-attachments/assets/40fba9dc-7134-4f65-a5a5-042837833fcd" />
-
----
-
-### Patient Input Form
-Features:
-- Age, gender and relation reporting  
-- Optional advanced demographics  
-- AQ-10 (0/1) questionnaire  
-- “Save Input” sidebar workflow  
-
-![Input Form](<img width="1643" height="919" alt="Screenshot 2025-11-26 at 8 21 40 AM" src="https://github.com/user-attachments/assets/c6959ef0-0e12-46e9-81e2-9e6503ffe6fb" />
-)
-
----
-
-### SHAP Explanation Section
-Provides:
-- Top feature contributions  
-- Local explanation table  
-- Bar chart
+## 10. Streamlit App — UI Gallery
+<details> <summary><strong>📸 Click to expand full UI + SHAP gallery</strong></summary> <br>
   
-![SHAP Local](<img width="1624" height="919" alt="Screenshot 2025-11-26 at 8 22 04 AM" src="https://github.com/user-attachments/assets/9cbd2ded-ecd4-4a10-a1de-99cca15fe475" />
-)
+🏠 Home Dashboard
+<p align="center"> <img src="assets/home.png" width="85%"> </p>
 
----
+🔍 Prediction View (Model Output)
+<p align="center"> <img src="assets/prediction.png" width="85%"> </p>
 
-### PDF Report Generator
-One-click clinical-style PDF including:
-- Prediction  
-- Probability  
-- Risk level  
-- AQ-10 score  
-- Recommendations  
-- SHAP feature list  
+📝 Generated PDF Report
+<p align="center"> <img src="assets/pdf_report.png" width="85%"> </p>
 
-![PDF](<img width="1680" height="1050" alt="Screenshot 2025-11-28 at 7 59 41 PM" src="https://github.com/user-attachments/assets/e6c8c7f4-2a69-438d-8f23-42cb5559a281" />
-)
-![PDF](<img width="1680" height="1050" alt="Screenshot 2025-11-28 at 7 59 41 PM" src="https://github.com/user-attachments/assets/56ecd049-ae7e-4631-b8f3-7f106e297048" />)
+🧠 SHAP Explainability
+📌 Local Feature Impact (Bar Plot)
+<p align="center"> <img src="assets/shap_bar.png" width="85%"> </p>
 
+📌 Global Beeswarm Plot
+<p align="center"> <img src="assets/shap_beeswarm.png" width="85%"> </p>
 
+📌 Waterfall (Single Sample)
+<p align="center"> <img src="assets/shap_waterfall_sample_0.png" width="85%"> </p>
+
+📈 Evaluation Metrics
+✔️ Confusion Matrix
+<p align="center"> <img src="assets/confusion_matrix.png" width="80%"> </p>
+
+✔️ ROC Curve
+<p align="center"> <img src="assets/roc_curve.png" width="80%"> </p>
+
+✔️ Calibration Curve
+<p align="center"> <img src="assets/calibration_curve.png" width="80%"> </p>
+
+</details>
