@@ -103,7 +103,8 @@ This explains the unusually high performance of ML models.
 
 ## Project Pipeline (ML Workflow)
 
-
+```mermaid
+flowchart LR
     subgraph PREP[Data Preparation]
         A1[Raw Data]
         A2[Cleaning]
@@ -115,7 +116,7 @@ This explains the unusually high performance of ML models.
 
     subgraph MODEL[Modeling]
         B1[XGBoost Training]
-        B2[Evaluation]
+        B2[Evaluation Metrics]
         B3[SHAP Explainability]
         B1 --> B2 --> B3
     end
@@ -128,44 +129,52 @@ This explains the unusually high performance of ML models.
     A5 --> B1
     B3 --> C1
     C1 --> C2
-
+```
     
 ## System Architecture Diagram
 
 ```mermaid
-flowchart LR
+flowchart TB
+
+    %% ========== FRONTEND ==========
     subgraph UI[Streamlit Frontend]
-        A1[Input Form]
-        A2[Prediction Dashboard]
-        A3[PDF Report Button]
+        UI1[Input Form]
+        UI2[Prediction Dashboard]
+        UI3[PDF Report Button]
     end
 
-    subgraph API[Backend Inference Layer]
-        B1[Preprocessing Pipeline]
-        B2[Label Encoders]
-        B3[StandardScaler]
-        B4[XGBoost Model]
-        B5[SHAP TreeExplainer]
+    %% ========== BACKEND ==========
+    subgraph BE[Backend Inference Layer]
+        BE1[Preprocessing]
+        BE2[Label Encoders]
+        BE3[Scaler]
+        BE4[XGBoost Model]
+        BE5[SHAP Explainer]
     end
 
-    subgraph Storage[Artifacts & Reports]
-        C1[models/]
-        C2[reports/]
-        C3[data/processed/]
+    %% ========== ARTIFACTS ==========
+    subgraph AR[Artifacts and Reports]
+        AR1[models folder]
+        AR2[reports folder]
+        AR3[data processed]
     end
 
-    %% Connections
-    A1 --> B1
-    B1 --> B2
-    B1 --> B3
-    B3 --> B4
-    B4 --> B5
-    B4 --> A2
-    B5 --> A2
-    A3 --> C2
-    B4 --> C1
-    B2 --> C1
-    B3 --> C1
+    %% ========== FLOWS ==========
+    UI1 --> BE1
+    BE1 --> BE2
+    BE1 --> BE3
+    BE3 --> BE4
+    BE4 --> BE5
+
+    BE4 --> UI2
+    BE5 --> UI2
+
+    UI3 --> AR2
+
+    BE4 --> AR1
+    BE2 --> AR1
+    BE3 --> AR1
+
 ```
 
 ## Model Performance & Comparison
