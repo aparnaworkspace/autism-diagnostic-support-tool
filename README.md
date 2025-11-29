@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="banner04.png" width="100%" />
+  <img src="assets/banner04.png" width="100%" />
 </p>
 
 <h1 align="center">🧠 Autism Diagnostic Support System</h1>
@@ -12,42 +12,45 @@
   <img src="https://img.shields.io/badge/Python-3.10+-yellow?style=for-the-badge" />
 </p>
 
+<p align="center">
+  <a href="https://autism-diagnostic-support-tool-2rngfswshayeyl7tghwwpt.streamlit.app/">
+    <img src="https://img.shields.io/badge/Live%20Demo-Streamlit%20App-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" />
+  </a>
+</p>
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" width="800">
+        <h2>🌟Executive Summary</h2>
+        <p>
+          A full end-to-end ML system for ASD screening using AQ-10 questionnaire data.
+          Includes XGBoost classifier, SHAP interpretability, Apple-Health-style UI,
+          and clinical-grade PDF reporting. Built as an impressive, production-quality
+          portfolio project demonstrating ML engineering, data pipelines, explainability,
+          UI engineering, and deployment.
+        </p>
+      </td>
+    </tr>
+  </table>
+</div>
 
 ## 📑 Table of Contents
 
-1. [Executive Summary](#executive-summary)
-2. [Problem Statement](#problem-statement)
-3. [Why Autism Detection Matters](#why-autism-detection-matters)
-4. [Dataset Description](#dataset-description)
-5. [Project Pipeline (ML Workflow)](#project-pipeline-ml-workflow)
-6. [System Architecture](#system-architecture)
-7. [Model Performance & Comparison](#model-performance--comparison)
-8. [Explainability (SHAP)](#explainability-shap)
-9. [Streamlit App UI Preview](#streamlit-app-ui-preview)
-10. [PDF Report Example](#pdf-report-example)
-11. [System Design Overview](#system-design-overview)
-12. [How to Run Locally](#how-to-run-locally)
-13. [Project Features](#project-features)
-14. [Clinical Disclaimer](#clinical-disclaimer)
-15. [Folder Structure](#folder-structure)
-16. [Model Card (XGBoost)](#xgboost-model-card)
-17. [Limitations](#limitations)
-18. [What I Learned](#what-i-learned)
-19. [About the Author](#about-the-author)
-
-## Executive Summary
-
-This project delivers a complete end-to-end **Autism Diagnostic Support System** powered by an 
-optimized **XGBoost model**, **SHAP explainability**, and a premium **Apple-Health-inspired UI**.  
-It transforms the AQ-10 screening questionnaire into an interactive risk-estimation tool with:
-
-- 🧠 Real-time ASD probability prediction  
-- 🎯 Transparent SHAP feature attributions  
-- 🩺 Clean clinical-style interface  
-- 📄 Auto-generated PDF reports  
-- ⚡ A fully reproducible ML pipeline + documentation  
-
-It is designed for **learning**, **research demonstration**, and **portfolio value** — not for clinical diagnosis.  
+1. [Problem Statement](#problem-statement)
+2. [Why Autism Detection Matters](#why-autism-detection-matters)
+3. [Dataset Description](#dataset-description)
+4. [Project Pipeline (ML Workflow)](#project-pipeline-ml-workflow)
+5. [System Architecture](#system-architecture)
+6. [Model Performance & Comparison](#model-performance--comparison)
+7. [Explainability (SHAP)](#explainability-shap)
+8. [Streamlit App UI Preview](#streamlit-app-ui-preview)
+9. [Project Features](#project-features)
+10. [How to Run Locally](#how-to-run-locally)
+11. [Folder Structure](#folder-structure)
+12. [Clinical Disclaimer](#clinical-disclaimer)
+13. [Limitations](#limitations)
+14. [Contact](#contact)
 
 ## Problem Statement
 
@@ -100,7 +103,8 @@ This explains the unusually high performance of ML models.
 
 ## Project Pipeline (ML Workflow)
 
-
+```mermaid
+flowchart LR
     subgraph PREP[Data Preparation]
         A1[Raw Data]
         A2[Cleaning]
@@ -112,7 +116,7 @@ This explains the unusually high performance of ML models.
 
     subgraph MODEL[Modeling]
         B1[XGBoost Training]
-        B2[Evaluation]
+        B2[Evaluation Metrics]
         B3[SHAP Explainability]
         B1 --> B2 --> B3
     end
@@ -125,47 +129,31 @@ This explains the unusually high performance of ML models.
     A5 --> B1
     B3 --> C1
     C1 --> C2
-
+```
     
 ## System Architecture Diagram
 
 ```mermaid
 flowchart LR
+
     subgraph UI[Streamlit Frontend]
-        A1[Input Form]
-        A2[Prediction Dashboard]
-        A3[PDF Report Button]
+        A[User Inputs & Dashboard]
     end
 
-    subgraph API[Backend Inference Layer]
-        B1[Preprocessing Pipeline]
-        B2[Label Encoders]
-        B3[StandardScaler]
-        B4[XGBoost Model]
-        B5[SHAP TreeExplainer]
+    subgraph BE[Backend Model Layer]
+        B[Preprocessing → XGBoost Model → SHAP Explainability]
     end
 
-    subgraph Storage[Artifacts & Reports]
-        C1[models/]
-        C2[reports/]
-        C3[data/processed/]
+    subgraph AR[Artifacts & Reports]
+        C[Models • Processed Data • PDF Reports]
     end
 
-    %% Connections
-    A1 --> B1
-    B1 --> B2
-    B1 --> B3
-    B3 --> B4
-    B4 --> B5
-    B4 --> A2
-    B5 --> A2
-    A3 --> C2
-    B4 --> C1
-    B2 --> C1
-    B3 --> C1
+    A --> B --> C
+
+
 ```
 
-## 7. Model Performance & Comparison
+## Model Performance & Comparison
 
 | Model                 | Accuracy | F1 Score | Recall | AUC      |
 |----------------------|----------|----------|--------|----------|
@@ -204,73 +192,312 @@ Example:
 - **Positive SHAP** → pushes toward *ASD Positive*  
 - **Larger magnitude** → stronger influence
 
-### 🌍 Global Explainability
-SHAP also generates global-level insights:
-
-- Which features influence predictions the most?
-- How strongly do AQ-10 symptoms contribute?
-- How does age or relation reporting affect outcomes?
-
-### 📊 SHAP Visuals (Included in /reports/)
--![shap bar](your-link-here)— Top feature importance  
--![shap beeswarm](your-link-here)— Global distribution of feature impact  
--![shap waterfall](your-link-here) — Detailed breakdown for one patient
-
-These visuals improve *trust, accountability, and transparency* in
-machine learning decisions.
-
-## Streamlit App UI Preview
-
-The application is designed in a **clean, Apple-Health inspired interface**  
-with soft white cards, rounded corners, teal accents, and clear readability.
-
-### Home / Prediction Dashboard
-Shows:
-- Patient summary  
-- Probability ring  
-- AQ-10 score card  
-- Risk level card  
-- SHAP feature explanation  
-
-![Dashboard](<img width="1634" height="920" alt="Screenshot 2025-11-26 at 8 20 56 AM" src="https://github.com/user-attachments/assets/560f6f2c-3473-4ee3-94e9-b0c9c9e3b45a" />
-)
-
----
-
-### Patient Input Form
-Features:
-- Age, gender and relation reporting  
-- Optional advanced demographics  
-- AQ-10 (0/1) questionnaire  
-- “Save Input” sidebar workflow  
-
-![Input Form](<img width="1643" height="919" alt="Screenshot 2025-11-26 at 8 21 40 AM" src="https://github.com/user-attachments/assets/c6959ef0-0e12-46e9-81e2-9e6503ffe6fb" />
-)
-
----
-
-### SHAP Explanation Section
-Provides:
-- Top feature contributions  
-- Local explanation table  
-- Bar chart
+## Streamlit App — UI Gallery
+<details> <summary><strong>📸 Click to expand full UI + SHAP gallery</strong></summary> <br>
   
-![SHAP Local](<img width="1624" height="919" alt="Screenshot 2025-11-26 at 8 22 04 AM" src="https://github.com/user-attachments/assets/9cbd2ded-ecd4-4a10-a1de-99cca15fe475" />
-)
+🏠 Home Dashboard
+<p align="center"> <img src="assets/home.png" width="85%"> </p>
 
----
+🔍 Prediction View (Model Output)
+<p align="center"> <img src="assets/prediction.png" width="85%"> </p>
+
+📝 Generated PDF Report
+<p align="center"> <img src="assets/pdf_report.png" width="85%"> </p>
+
+🧠 SHAP Explainability
+
+📌 Local Feature Impact (Bar Plot)
+<p align="center"> <img src="assets/shap_bar.png" width="85%"> </p>
+
+📌 Global Beeswarm Plot
+<p align="center"> <img src="assets/shap_beeswarm.png" width="85%"> </p>
+
+📌 Waterfall (Single Sample)
+<p align="center"> <img src="assets/shap_waterfall_sample_0.png" width="85%"> </p>
+
+📈 Evaluation Metrics
+
+✔️ Confusion Matrix
+<p align="center"> <img src="assets/confusion_matrix.png" width="80%"> </p>
+
+✔️ ROC Curve
+<p align="center"> <img src="assets/roc_curve.png" width="80%"> </p>
+
+✔️ Calibration Curve
+<p align="center"> <img src="assets/calibration_curve.png" width="80%"> </p>
+
+</details>
+
+## Project Features
+<details> <summary><strong>✨ Click to expand Feature Highlights</strong></summary> <br>
+  
+### Core Features
+
+ASD Risk Prediction using an optimized XGBoost classifier
+
+Apple-Health Inspired UI with clean, clinical-style cards
+
+Real-time Probability Ring that visualizes ASD+ likelihood
+
+AQ-10 Questionnaire Input (10 binary symptom questions)
+
+Demographic Inputs with encoded categorical features
+
+Dynamic Risk Scoring based on total AQ-10 + age
+
+SHAP Explainability (local + global)
+
+### Explainability Features
+
+Local SHAP force explanation (per patient)
+
+Global beeswarm + bar importance plots
+
+Waterfall plot for individual predictions
+
+Top 6 contributing features displayed in-dashboard
 
 ### PDF Report Generator
-One-click clinical-style PDF including:
-- Prediction  
-- Probability  
-- Risk level  
-- AQ-10 score  
-- Recommendations  
-- SHAP feature list  
 
-![PDF](<img width="1680" height="1050" alt="Screenshot 2025-11-28 at 7 59 41 PM" src="https://github.com/user-attachments/assets/e6c8c7f4-2a69-438d-8f23-42cb5559a281" />
-)
-![PDF](<img width="1680" height="1050" alt="Screenshot 2025-11-28 at 7 59 41 PM" src="https://github.com/user-attachments/assets/56ecd049-ae7e-4631-b8f3-7f106e297048" />)
+Exports a clinical-style report containing:
 
+Prediction
+
+Probability
+
+AQ-10 score
+
+Risk level
+
+Recommendation
+
+Top SHAP contributions
+
+Great for portfolio + recruiters.
+
+### Machine Learning Pipeline
+
+Preprocessing: encoding + feature engineering
+
+Train/test split
+
+XGBoost model training
+
+ROC, AUC, confusion matrix, calibration
+
+Serialized model artifacts saved in /models/
+
+### Evaluation & Model Monitoring
+
+Confusion Matrix
+
+ROC Curve
+
+Calibration Curve
+
+Model Comparison Table
+
+SHAP-based auditing
+
+### Software Architecture Highlights
+
+Clear separation of concerns (src/, app/, models/, notebooks/)
+
+Production-like artifact loading in Streamlit
+
+Modular risk scoring function
+
+Explainability integrated into UI
+
+### Deployment-Ready
+
+Fully packaged Streamlit app
+
+GitHub-friendly structure
+
+Works locally or on cloud platforms (Streamlit Cloud)
+
+</details>
+
+## How to Run Locally
+
+Follow the steps below to run the Autism Diagnostic Support System on your machine.
+
+1. Clone the Repository
+
+```bash
+git clone https://github.com/aparnaworkspace/autism-diagnostic-support-tool
+cd autism-diagnostic-support-tool
+```
+
+2. Create and Activate a Virtual Environment
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+(Windows users: venv\Scripts\activate)
+
+3. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+4. Run the Streamlit Application
+
+```bash
+streamlit run app/streamlit_app.py
+```
+
+5. Regenerate SHAP Explainability Visuals
+
+If you want fresh SHAP plots (bar, beeswarm, waterfall):
+
+```bash
+python notebooks/04_Model_Evaluation.py
+```
+
+6. Jupyter Notebook Workflow
+
+To explore EDA or model training:
+
+```bash
+jupyter lab
+```
+
+## Folder Structure
+
+A well-structured, production-style codebase:
+
+```
+autism-diagnostic-support-tool/
+│
+├── app/
+│   └── streamlit_app.py
+│
+├── assets/
+│   ├── home.png
+│   ├── prediction.png
+│   ├── pdf_report.png
+│   ├── shap_bar.png
+│   ├── shap_beeswarm.png
+│   ├── shap_waterfall_sample_0.png
+│   ├── confusion_matrix.png
+│   ├── calibration_curve.png
+│   └── roc_curve.png
+│
+├── data/
+│   ├── raw/
+│   │   ├── autism_screening.csv
+│   │   └── Autism-Child-Data.csv
+│   └── processed/
+│       ├── autism_combined.csv
+│       ├── X_train.csv
+│       ├── X_test.csv
+│       ├── y_train.csv
+│       └── y_test.csv
+│
+├── models/
+│   ├── best_model.pkl
+│   ├── scaler.pkl
+│   ├── label_encoders.pkl
+│   └── shap_explainer_and_values.pkl
+│
+├── notebooks/
+│   ├── 01_EDA.ipynb
+│   ├── 02_Feature_Engineering.ipynb
+│   ├── 03_Model_Training.ipynb
+│   └── 04_Model_Evaluation.ipynb
+│
+├── reports/
+│   ├── confusion_matrix.png
+│   ├── roc_curve.png
+│   ├── calibration_curve.png
+│   └── *.pdf
+│
+├── src/
+│   ├── preprocess.py
+│   ├── train_model.py
+│   ├── risk_scoring.py
+│   └── explainability.py
+│
+├── docs/
+│   ├── MODEL_CARD.md
+│   ├── DATA_CARD.md
+│   ├── MODEL_COMPARISON.md
+│   ├── SYSTEM_ARCHITECTURE.md
+│   └── ETHICS_CARD.md
+│
+├── requirements.txt
+└── README.md
+```
+## Clinical Disclaimer
+
+⚠️ This tool is NOT a diagnostic system.
+
+It is an educational machine-learning project designed for:
+
+research demonstration
+
+explainability exploration (SHAP)
+
+portfolio and skill showcasing
+
+Autism Spectrum Disorder (ASD) diagnosis requires trained clinicians and involves:
+
+behavioural observation
+
+developmental history
+
+structured clinical interviews
+
+neuropsychological assessments
+
+multi-disciplinary evaluation
+
+genetics & neurological analysis
+
+No machine-learning model, screening questionnaire, or digital tool can replace professional evaluation.
+This project should not be used for medical, clinical, or therapeutic decision-making.
+
+## Limitations
+
+Despite strong performance, the project has important limitations that recruiters and reviewers should know:
+
+Dataset Limitations
+
+Small dataset (≈700 samples)
+
+Questionnaire-based (AQ-10) → inherently diagnostic
+
+Limited feature variety (binary responses, demographics)
+
+May contain cultural or demographic biases
+
+Does not include real-world behavioural, video, audio, MRI, or genetic data
+
+Model Limitations
+
+High accuracy partly due to dataset separability
+
+May not generalize to unseen populations or clinical settings
+
+No temporal, behavioural, or contextual signals
+
+Risk of overfitting due to small sample size
+
+Application Limitations
+
+UI is for demonstration only (not medically approved)
+
+SHAP helps explain decisions but does not guarantee model fairness
+
+PDF reports are educational summaries, not clinical documents
+
+## Contact
+If you’d like to connect or discuss this project:
+📧 aparnasajeevan16@gmail.com 
+
+🔗 LinkedIn:www.linkedin.com/in/aparnasajeevan1610
 
