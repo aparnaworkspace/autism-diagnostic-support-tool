@@ -161,7 +161,7 @@ flowchart LR
     B3 --> C1
 ```
 
-## 7. Model Performance & Comparison
+## Model Performance & Comparison
 
 | Model                 | Accuracy | F1 Score | Recall | AUC      |
 |----------------------|----------|----------|--------|----------|
@@ -220,6 +220,7 @@ SHAP also generates global-level insights:
 <p align="center"> <img src="assets/pdf_report.png" width="85%"> </p>
 
 🧠 SHAP Explainability
+
 📌 Local Feature Impact (Bar Plot)
 <p align="center"> <img src="assets/shap_bar.png" width="85%"> </p>
 
@@ -230,6 +231,7 @@ SHAP also generates global-level insights:
 <p align="center"> <img src="assets/shap_waterfall_sample_0.png" width="85%"> </p>
 
 📈 Evaluation Metrics
+
 ✔️ Confusion Matrix
 <p align="center"> <img src="assets/confusion_matrix.png" width="80%"> </p>
 
