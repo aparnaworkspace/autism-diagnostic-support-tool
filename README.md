@@ -12,6 +12,11 @@
   <img src="https://img.shields.io/badge/Python-3.10+-yellow?style=for-the-badge" />
 </p>
 
+<p align="center">
+  <a href="https://autism-diagnostic-support-tool-2rngfswshayeyl7tghwwpt.streamlit.app/">
+    <img src="https://img.shields.io/badge/Live%20Demo-Streamlit%20App-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" />
+  </a>
+</p>
 
 ## 📑 Table of Contents
 
@@ -246,7 +251,7 @@ SHAP also generates global-level insights:
 ## Project Features
 <details> <summary><strong>✨ Click to expand Feature Highlights</strong></summary> <br>
   
-💡 Core Features
+### 💡 Core Features
 
 ASD Risk Prediction using an optimized XGBoost classifier
 
@@ -262,7 +267,7 @@ Dynamic Risk Scoring based on total AQ-10 + age
 
 SHAP Explainability (local + global)
 
-🧠 Explainability Features
+### 🧠 Explainability Features
 
 Local SHAP force explanation (per patient)
 
@@ -272,7 +277,7 @@ Waterfall plot for individual predictions
 
 Top 6 contributing features displayed in-dashboard
 
-📄 PDF Report Generator
+### 📄 PDF Report Generator
 
 Exports a clinical-style report containing:
 
@@ -290,7 +295,7 @@ Top SHAP contributions
 
 Great for portfolio + recruiters.
 
-📚 Machine Learning Pipeline
+### 📚 Machine Learning Pipeline
 
 Preprocessing: encoding + feature engineering
 
@@ -302,7 +307,7 @@ ROC, AUC, confusion matrix, calibration
 
 Serialized model artifacts saved in /models/
 
-🧪 Evaluation & Model Monitoring
+### 🧪 Evaluation & Model Monitoring
 
 Confusion Matrix
 
@@ -314,7 +319,7 @@ Model Comparison Table
 
 SHAP-based auditing
 
-🏗️ Software Architecture Highlights
+### 🏗️ Software Architecture Highlights
 
 Clear separation of concerns (src/, app/, models/, notebooks/)
 
@@ -324,7 +329,7 @@ Modular risk scoring function
 
 Explainability integrated into UI
 
-🚀 Deployment-Ready
+### 🚀 Deployment-Ready
 
 Fully packaged Streamlit app
 
@@ -333,3 +338,4 @@ GitHub-friendly structure
 Works locally or on cloud platforms (Streamlit Cloud)
 
 </details>
+
